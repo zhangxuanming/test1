@@ -2,9 +2,55 @@
 <html>
 <head lang = "en">
     <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
     <title>div index</title>
+
+    <link rel="stylesheet" href="css/pure/pure.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/pure/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+    <!--<![endif]-->
+    <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
+    <link rel="stylesheet" href="css/app.css">
+
 </head>
 <body>
-  测试首页啊
+    <div id="fullpage" class="page-wrapper">
+        <div class="section page red">
+            <div class="page-content">
+                <img src="img/NatGeo01.jpg" class="pure-img"/>
+            </div>
+        </div>
+        <div class="section page blue">
+            <div class="page-content">
+                <img src="img/NatGeo02.jpg" class="pure-img"/>
+            </div>
+        </div>
+        <div class="section page yellow">
+            <div class="page-content">
+                <img src="img/NatGeo03.jpg" class="pure-img"/>
+            </div>
+        </div>
+        <div class="section page green">
+            <div class="page-content">
+                <img src="img/NatGeo04.jpg" class="pure-img"/>
+            </div>
+        </div>
+    </div>
 </body>
+<script src="js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script>
+    $(document).ready(function(){
+        $('#fullpage').fullpage();
+    })
+</script>
 </html>
