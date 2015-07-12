@@ -39,7 +39,7 @@
         <div class="section page red">
             <div class="page-content" style="background-image:url(./img/NatGeo01.jpg)">
                 <div class="text">
-                    <p>世界上最傻得企鹅</p>
+                    <p class="wow fadeIn">世界上最傻得企鹅</p>
                 </div>
             </div>
         </div>
@@ -71,11 +71,17 @@
 <script>
     new WOW().init();
     $(document).ready(function(){
-        $('#fullpage').fullpage();
         $("h1").click(function(e){
             $(this).removeClass("fadeIn").removeAttr("style").addClass("wobble");
             new WOW().init();
-        })
+        });
+
+        $('#fullpage').fullpage({
+            scrollBar:true,
+            afterLoad:function(anchorLink, index){
+//                console.log(index);
+            }
+        });
     })
 </script>
 </html>
