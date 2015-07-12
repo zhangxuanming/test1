@@ -13,6 +13,16 @@
     display: block;
     z-index: 1;
 }
+.text{
+    position: absolute;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    font-family:arial, helvetica, sans-serif;
+    bottom: 50%;
+    margin:0 auto;
+    font-size: 20pt;
+}
 
 .red{
     background-color: red;
