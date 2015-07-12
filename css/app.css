@@ -1,6 +1,10 @@
+
 /*.page-wrapper{*/
     /*overflow: hidden;*/
 /*}*/
+body {
+    font-family: "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 .page{
     width: 100%;
     height: 100%;
@@ -21,7 +25,6 @@
     text-align: center;
     color: #ffffff;
     width: 100%;
-    font-family:arial, helvetica, sans-serif;
     bottom: 50%;
     margin:0 auto;
     font-size: 20pt;
@@ -39,3 +42,15 @@
 .green{
     background-color: green;
 }
+
+h1{
+    margin: 0 ;
+    text-align: center;
+    color: #ffffff;
+}
+/*.s5 .des{*/
+    /*background-color: red;*/
+    /*height: 100%;*/
+    /*top: 0;*/
+    /*left: 0;*/
+/*}*/
