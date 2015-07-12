@@ -23,11 +23,14 @@ body {
 .text{
     position: absolute;
     text-align: center;
-    color: #ffffff;
+    /*color: #ffffff;*/
     width: 100%;
-    bottom: 50%;
+    bottom: 30%;
     margin:0 auto;
     font-size: 20pt;
+}
+.text p{
+    color: #ffffff;
 }
 
 .red{
