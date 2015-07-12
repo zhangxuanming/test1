@@ -20,6 +20,8 @@
     <!--<![endif]-->
     <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.css">
     <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/animate.css" />
+
     <link rel="stylesheet" href="css/app.css?v=1">
 
     <div id='wx_pic' style='margin:0 auto;display:none;'>
@@ -31,7 +33,7 @@
     <div id="fullpage" class="page-wrapper">
         <div class="section page blue s1">
             <div class="des">
-                <h1>我们的传奇，就此开始</h1>
+                <h1 class="wow fadeIn">我们的传奇，就此开始</h1>
             </div>
         </div>
         <div class="section page red">
@@ -65,9 +67,15 @@
 </body>
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+<script type="text/javascript" src="js/wow.min.js"></script>
 <script>
+    new WOW().init();
     $(document).ready(function(){
         $('#fullpage').fullpage();
+        $("h1").click(function(e){
+            $(this).removeClass("fadeIn").removeAttr("style").addClass("wobble");
+            new WOW().init();
+        })
     })
 </script>
 </html>
