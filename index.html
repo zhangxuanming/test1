@@ -87,7 +87,8 @@
                 var thisSide = $('[data-anchor=slide'+index+']');
                 var h1 = thisSide.find('h1');
                 TweenMax.set(h1,{top:"0%",alpha:0,rotation:0,scale:0});
-                TweenMax.to(h1,1.5,{delay:0.5,top:"50%",alpha:1,rotation:"360",scale:1,ease:Back.easeOut});
+//                TweenMax.to(h1,1.5,{delay:0.5,top:"50%",alpha:1,rotation:"360",scale:1,ease:Back.easeOut});
+                TweenMax.staggerTo(h1,1.5,{top:"50%",alpha:1,rotation:"360",scale:1,ease:Back.easeOut},0.3);
             }
         });
 
