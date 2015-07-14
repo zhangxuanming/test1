@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
     <!--<![endif]-->
     <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.css">
+    <!--<link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">-->
     <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.css" />
 
@@ -27,38 +28,37 @@
     <div id='wx_pic' style='margin:0 auto;display:none;'>
         <img src='img/thumb.jpg' />
     </div>
-
 </head>
 <body>
     <div id="fullpage" class="page-wrapper">
-        <div class="section page blue s1">
-            <div class="des">
-                <h1 class="wow fadeIn">我们的传奇，就此开始</h1>
+        <div class="section page blue s1" data-anchor="slide1">
+            <div class="des" style="height: 100%;">
+                <h1 style="position: relative">我们的传奇，就此开始</h1>
             </div>
         </div>
-        <div class="section page red">
-            <div class="page-content" style="background-image:url(./img/amd_01.png)">
-                <div class="text">
-                    <p class="wow fadeIn">世界上最傻得企鹅</p>
-                </div>
-            </div>
+        <div class="section page red" data-anchor="slide2">
+            <h1>12312312312</h1>
+            <h1>12312312312</h1>
+            <h1>12312312312</h1>
+            <h1>12312312312</h1>
+            <h1>12312312312</h1>
         </div>
-        <div class="section page blue">
+        <div class="section page blue" data-anchor="slide3">
             <div class="page-content" style="background-image:url(./img/NatGeo03.jpg)">
 
             </div>
         </div>
-        <div class="section page yellow">
+        <div class="section page yellow" data-anchor="slide4">
             <div class="page-content" style="background-image:url(./img/NatGeo05.jpg)">
 
             </div>
         </div>
-        <div class="section page green">
+        <div class="section page green" data-anchor="slide5">
             <div class="page-content" style="background-image:url(./img/NatGeo06.jpg)">
 
             </div>
         </div>
-        <div class="section page green s5">
+        <div class="section page green s5" data-anchor="slide6">
             <div class="des">
                 <h1>我们的传奇，到此结束</h1>
             </div>
@@ -68,8 +68,10 @@
 <script src="js/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="js/jquery.fullPage.js"></script>
 <script type="text/javascript" src="js/wow.min.js"></script>
+<script type="text/javascript" src="js/gsap/uncompressed/TweenMax.js"></script>
+<script type="text/javascript" src="js/gsap/uncompressed/TimelineMax.js"></script>
 <script>
-    new WOW().init();
+//    new WOW().init();
     $(document).ready(function(){
         $("h1").click(function(e){
             $(this).removeClass("fadeIn").removeAttr("style").addClass("wobble");
@@ -78,10 +80,20 @@
 
         $('#fullpage').fullpage({
             scrollBar:true,
+            onLeave:function(index,nextIndex,direction){
+
+            },
             afterLoad:function(anchorLink, index){
-//                console.log(index);
+                var thisSide = $('[data-anchor=slide'+index+']');
+                var h1 = thisSide.find('h1');
+                TweenMax.set(h1,{top:"0%",alpha:0,rotation:0,fontSize:"0pt"});
+                TweenMax.to(h1,2,{top:"50%",alpha:1,rotation:"360",fontSize:"20pt"});
             }
         });
+
+//        var h1 = $("h1");
+//        TweenMax.to(h1,2,{width:"30px"});
+//        console.log(h1);
     })
 </script>
 </html>

@@ -2,9 +2,22 @@
 /*.page-wrapper{*/
     /*overflow: hidden;*/
 /*}*/
-body {
+body html{
     font-family: "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
+.container {
+    height:100%;
+}
+
+.fill{
+    width:100%;
+    height:100%;
+    min-height:100%;
+}
+
 .page{
     width: 100%;
     height: 100%;
@@ -34,8 +47,19 @@ body {
 }
 
 .page-content{
+    margin: 0;
+    width: 100%;
+    /*background-size: auto 100%;*/
+    /*background-repeat: no-repeat*/
+}
+.bg-img{
+    background-color: #dcdcdc;
+    height: 100%;
     background-size: auto 100%;
-    background-repeat: no-repeat
+    background-repeat: no-repeat;
+    -webkit-background-size: auto 100%;
+    background-position: center;
+
 }
 
 .red{
@@ -56,9 +80,24 @@ h1{
     text-align: center;
     color: #ffffff;
 }
-/*.s5 .des{*/
-    /*background-color: red;*/
-    /*height: 100%;*/
-    /*top: 0;*/
-    /*left: 0;*/
+
+/*@keyframes animatedBackground {*/
+    /*from { background-position: 0 0; }*/
+    /*to { background-position: 100% 0; }*/
 /*}*/
+
+@keyframes animatedBackground {
+from { background-size: auto 100%; }
+to { background-size: auto 60%; }
+}
+
+.animate-area	{
+    /*width: 560px;*/
+    /*height: 400px;*/
+    /*background-image: url(bg-clouds.png);*/
+    /*background-position: 0px 0px;*/
+    /*background-repeat: repeat-x;*/
+    /*background-size: 90%;*/
+
+    /*animation: animatedBackground 0.1s linear 1;*/
+}
