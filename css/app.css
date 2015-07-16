@@ -3,7 +3,7 @@
     /*overflow: hidden;*/
 /*}*/
 body html{
-    font-family: "微软雅黑","Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -157,3 +157,11 @@ h1{
     box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.39);
 }
 
+.boxsd1 {
+    -webkit-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.39);
+    -moz-box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.39);
+    box-shadow: 5px 7px 5px 0px rgba(0,0,0,0.39);
+}
+.txtsd1{
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.48);
+}
