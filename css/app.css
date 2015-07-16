@@ -160,7 +160,7 @@ to { background-size: auto 60%; }
 .al{
     position: relative;
     margin: 0 auto;
-    width: 2px;
+    width: 3px;
     height: 0;
     top:10px;
     background-color: azure;
