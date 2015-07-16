@@ -78,6 +78,13 @@ h1{
     margin: 0 ;
     text-align: center;
     color: #ffffff;
+    font-size: 3em;
+}
+
+@media (max-width: 600px) {
+    h1 {
+       font-size: 2em;
+    }
 }
 
 .footer{

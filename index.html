@@ -103,10 +103,10 @@
                 var tw = null;
                 switch (index){
                     case 1:
-                        tw = TweenMax.set(h1,{top:"0%",alpha:0,rotation:0,scale:0});
+                        tw = TweenMax.set(h1,{x:-100,top:"40%",alpha:0,scale:0});
                         TweenMax.staggerTo(
                             h1,2,
-                            {alpha:1,top:"50%",rotation:"360",scale:1,ease:Strong.easeOut},0.3
+                            {alpha:1,x:0,top:"40%",scale:1,ease:Strong.easeOut},0.3
                         );
                         break;
                     case 2:
