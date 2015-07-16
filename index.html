@@ -67,12 +67,15 @@
         </div>
     </div>
     <div class="footer">
+        <!--<div class="arbase">-->
+            <!--<div class="ar"></div>-->
+            <!--<div class="arline"></div>-->
+            <!--<div class="arline"></div>-->
+            <!--<div class="arline"></div>-->
+            <!--<div class="arline"></div>-->
+        <!--</div>-->
         <div class="arbase">
-            <div class="ar"></div>
-            <div class="arline"></div>
-            <div class="arline"></div>
-            <div class="arline"></div>
-            <div class="arline"></div>
+            <div class="al"></div>
         </div>
     </div>
 </body>
@@ -117,18 +120,28 @@
             }
         });
 
-        var ar = $('.arbase').children();
+//        var ar = $('.arbase').children();
+        var al = $('.al');
+        var ap = $('.ap');
+
 //        TweenMax.staggerFromTo(ar,0.1,
 //                {alpha:0.3},
 //                {alpha:1,width:"-=10px",repeat:-1,borderBottomColor:"red",repeatDelay:1,yoyo:true,ease:Linear.ease},-0.1);
 //
+//        var timeLine = new TimelineMax({repeat:-1});
+//        timeLine.staggerFromTo(ar,0.5,
+//                    {opacity:1,borderBottomColor:"white"},
+//                    {opacity:0,borderBottomColor:"red",scale:0.7},-0.06)
+//                .staggerFromTo(ar,0.5,
+//                    {opacity:0},
+//                    {opacity:0.8,scale:1},-0.06);
         var timeLine = new TimelineMax({repeat:-1});
-        timeLine.staggerFromTo(ar,0.4,
-                    {opacity:1},
-                    {opacity:0,borderBottomColor:"red",scale:0.5},-0.06)
-                .staggerFromTo(ar,0.3,
-                    {opacity:0},
-                    {opacity:1,scale:1},-0.06);
+        timeLine.fromTo(al,2,
+            {y:0,height:"0px"},
+            {y:-50,height:"50px",alpha:0,ease:Back.easeIn}
+            ,0.5
+        );
+//                .to(ap,1.5,{y:-50,ease:Back.easeOut},1);
     })
 </script>
 </html>
