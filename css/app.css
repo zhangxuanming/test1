@@ -36,7 +36,6 @@ body html{
 .text{
     position: absolute;
     text-align: center;
-    /*color: #ffffff;*/
     width: 100%;
     bottom: 30%;
     margin:0 auto;
@@ -54,14 +53,14 @@ body html{
 }
 .bg-img{
     background-color: #dcdcdc;
-    height: 100%;
+    /*width: 100%;*/
     background-size: auto 100%;
     background-repeat: no-repeat;
-    -webkit-background-size: auto 100%;
-    background-position: center;
+    -webkit-background-size: 100% auto;
+    background-position: center ;
+    /*margin: 0 auto;*/
 
 }
-
 .red{
     background-color: red;
 }
@@ -79,27 +78,6 @@ h1{
     margin: 0 ;
     text-align: center;
     color: #ffffff;
-}
-
-/*@keyframes animatedBackground {*/
-    /*from { background-position: 0 0; }*/
-    /*to { background-position: 100% 0; }*/
-/*}*/
-
-@keyframes animatedBackground {
-from { background-size: auto 100%; }
-to { background-size: auto 60%; }
-}
-
-.animate-area	{
-    /*width: 560px;*/
-    /*height: 400px;*/
-    /*background-image: url(bg-clouds.png);*/
-    /*background-position: 0px 0px;*/
-    /*background-repeat: repeat-x;*/
-    /*background-size: 90%;*/
-
-    /*animation: animatedBackground 0.1s linear 1;*/
 }
 
 .footer{
@@ -168,15 +146,4 @@ to { background-size: auto 60%; }
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
 }
-/*.al::after{*/
-    /*position: absolute;*/
-    /*content: "";*/
-    /*background-color: azure;*/
-    /*border: 2px solid azure;*/
-    /*width: 21px;*/
-    /*height: 21px;*/
-    /*display: block;*/
-    /*margin-left: -8px;*/
-    /*bottom: -8px;*/
-    /*border-radius: 20px;*/
-/*}*/
+
