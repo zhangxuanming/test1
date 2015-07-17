@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang = "en">
+    <meta charset = "UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+
+    <title>AMD 什么的最厉害了</title>
+
+    <!--<link rel="stylesheet" href="css/pure/pure-min.css">-->
+    <link rel="stylesheet" href="css/pure/pure.css">
+    <link rel="stylesheet" href="css/amd.css">
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="css/pure/grids-responsive-old-ie-min.css">
+    <![endif]-->
+    <!--[if gt IE 8]><!-->
+    <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
+    <!--<![endif]-->
+
+    <script src="js/zepto.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+
+    <div id='wx_pic' style='margin:0 auto;display:none;'>
+        <img src='img/thumb.jpg' />
+    </div>
+</head>
+<body>
+    <div class="continer-wrapper">
+        <div class="pg fill bg-green page1"></div>
+        <div class="pg fill bg-yellow hide page2"></div>
+        <div class="pg fill bg-pink hide page3"></div>
+        <div class="pg fill bg-red hide page4"></div>
+        <div class="pg fill bg-black hide page5"></div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function(){
+        var el = $('.page1')[0];
+        var mc = new Hammer.Manager(el, {
+            recognizers: [
+                // RecognizerClass, [options], [recognizeWith, ...], [requireFailure, ...]
+//                [Hammer.Rotate],
+//                [Hammer.Pinch, { enable: false }, ['rotate']],
+                [Hammer.Swipe,{ direction: Hammer.DIRECTION_VERTICAL }]
+            ]
+        });
+        mc.on('swipe',function(ev){
+           console.log(ev);
+        });
+    });
+</script>
+</html>

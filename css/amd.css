@@ -1,0 +1,62 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.continer-wrapper{
+    margin: 0 auto;
+    height: 100%;
+}
+.bg-red{
+    background-color: red;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-yellow{
+    background-color: #FFD735;
+}
+.bg-pink{
+    background-color: #FF5BC4;
+}
+.bg-black{
+    background-color: #444444;
+}
+.fill{
+    height:100%;
+    width:100%;
+    min-height:100%;
+}
+.margin-top-05 { margin-top: 0.5em; }
+.margin-top-10 { margin-top: 1.0em; }
+.margin-top-15 { margin-top: 1.5em; }
+.margin-top-20 { margin-top: 2.0em; }
+.margin-top-25 { margin-top: 2.5em; }
+.margin-top-30 { margin-top: 3.0em; }
+
+/*clearfix*/
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.cf:after {
+    clear: both;
+}
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.hide{
+    display: none;
+}
+.active{
+    display: block;
+}
+
+.page1{
+    transition: all 0.3s linear;
+}

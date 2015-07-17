@@ -77,6 +77,9 @@
         <div class="arbase">
             <div class="al"></div>
         </div>
+        <div class="txt">
+            这是一个slpit text 控制器 这是一个slpit text 控制器这是一个slpit text 控制器这是一个slpit text 控制器这是一个slpit text 控制器这是一个slpit text 控制器
+        </div>
     </div>
 </body>
 <script src="js/jquery-1.11.3.min.js"></script>
@@ -84,6 +87,7 @@
 <script type="text/javascript" src="js/wow.min.js"></script>
 <script type="text/javascript" src="js/gsap/uncompressed/TweenMax.js"></script>
 <script type="text/javascript" src="js/gsap/uncompressed/TimelineMax.js"></script>
+<script type="text/javascript" src="js/gsap/st.js"></script>
 <script>
 //    new WOW().init();
     $(document).ready(function(){
@@ -120,6 +124,8 @@
             }
         });
 
+        var splitText = new SplitText(".txt");
+
 //        var ar = $('.arbase').children();
         var al = $('.al');
         var ap = $('.ap');
@@ -135,10 +141,11 @@
 //                .staggerFromTo(ar,0.5,
 //                    {opacity:0},
 //                    {opacity:0.8,scale:1},-0.06);
+        TweenMax.staggerFromTo(splitText.words,1,{y:0,scale:0,color:"red"},{y:-50,scale:1,color:"white",ease:Back.easeInOut},0.1);
         var timeLine = new TimelineMax({repeat:-1});
         timeLine.fromTo(al,1.5,
             {y:0,height:"0px"},
-            {y:-30,height:"50px",alpha:0,ease:Linear.easeIn}
+            {y:-30,height:"30px",alpha:0,yoyo:true,ease:Linear.easeIn}
             ,0
         );
 //                .to(ap,1.5,{y:-50,ease:Back.easeOut},1);
