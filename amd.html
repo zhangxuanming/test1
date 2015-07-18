@@ -30,28 +30,46 @@
 </head>
 <body>
     <div class="continer-wrapper">
-        <div class="pg fill bg-green page1"></div>
-        <div class="pg fill bg-yellow hide page2"></div>
-        <div class="pg fill bg-pink hide page3"></div>
-        <div class="pg fill bg-red hide page4"></div>
-        <div class="pg fill bg-black hide page5"></div>
+        <div class="page-panel fill">
+            <div class="page fill bg-green hide page1 active" data-pi="1">
+            </div>
+            <div class="page fill bg-yellow hide page2" data-pi="2"></div>
+            <div class="page fill bg-pink hide page3" data-pi="3"></div>
+            <div class="page fill bg-red hide page4" data-pi="4"></div>
+            <div class="page fill bg-black hide page5" data-pi="5"></div>
+        </div>
     </div>
 </body>
 
 <script>
     $(document).ready(function(){
-        var el = $('.page1')[0];
+//        var el = $('.page1').get(0);
+        var panel = $('.page-panel');
+        var el = panel.get(0);
+        var pages = $('.page');
+        var currentPage = $('.page1');
+        var nextPage = $('.page2');
+
+
         var mc = new Hammer.Manager(el, {
+            preventDefault: true,
             recognizers: [
-                // RecognizerClass, [options], [recognizeWith, ...], [requireFailure, ...]
-//                [Hammer.Rotate],
-//                [Hammer.Pinch, { enable: false }, ['rotate']],
                 [Hammer.Swipe,{ direction: Hammer.DIRECTION_VERTICAL }]
             ]
         });
         mc.on('swipe',function(ev){
-            $(".page1").html(10231231*Math.random());
-           console.log(ev);
+            currentPage = pages.filter('.active');
+            if (ev.direction == 8){
+                nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))+1));
+            }else{
+                nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))-1));
+            }
+            if (nextPage.length < 1){
+                return
+            } //啥都没选到
+            currentPage.removeClass('active');
+            nextPage.addClass('active');
+
         });
     });
 </script>
