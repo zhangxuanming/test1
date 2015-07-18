@@ -60,8 +60,8 @@ html,body{
     height: 0;
     visibility: hidden;
     opacity: 0;
-    -webkit-animation: fly 0.5s linear;
-    animation: fly 0.5s linear;
+    -webkit-animation: fly 1s linear;
+    animation: fly 1s linear;
 }
 
 .active{
