@@ -43,7 +43,6 @@
 
 <script>
     $(document).ready(function(){
-//        var el = $('.page1').get(0);
         var panel = $('.page-panel');
         var el = panel.get(0);
         var pages = $('.page');
@@ -55,35 +54,15 @@
         var mc = new Hammer.Manager(el, {
             preventDefault: true,
             recognizers: [
-//                [Hammer.Pan,{ direction: Hammer.DIRECTION_VERTICAL,threshold: 100 }],
                 [Hammer.Swipe,{ direction: Hammer.DIRECTION_VERTICAL,threshold: 50,velocity:0.1}]
             ]
         });
         mc.on('swipe',function(ev){
             currentPage = pages.filter('.active');
-
-            if(ev.type == 'pan'){
-                console.log(ev);
-                console.log(ev.distance);
-            }
-            if(ev.type == 'swipe'){
-                console.log(123);
-                if (ev.direction == 8){
-                    nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))+1));
-                }else{
-                    nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))-1));
-                }
+            if (ev.direction == 8){
+                nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))+1));
             }else{
-//                if(ev.direction==8 && ev.velocityY>1){
-//                    console.log('up');
-//                }
-//                console.log(currentPage)
-//                if (ev.direction == 8 && ev.offsetDirection>200 ){
-//                    nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))+1));
-//                }
-//                if (ev.direction == 16 && ev.offsetDirection>200 ){
-//                    nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))-1));
-//                }
+                nextPage = $('.page'+(parseInt(currentPage.attr('data-pi'))-1));
             }
             if (!nextPage || nextPage.length < 1){
                 return
@@ -91,7 +70,6 @@
 
             currentPage.removeClass('active').addClass('hide');
             nextPage.removeClass('hide').addClass('active');
-//            nextPage.addClass('active');
 
         });
     });
