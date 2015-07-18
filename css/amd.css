@@ -56,12 +56,15 @@ html,body{
 
 .hide{
     /*display: none;*/
-
+    /*top: -500px;*/
+    right:-500px;
+    top:-500px;
     height: 0;
     visibility: hidden;
-    opacity: 0;
-    -webkit-animation: fly 1s linear;
-    animation: fly 1s linear;
+    opacity: 1;
+    -webkit-animation: fly 1s ease;
+    animation: fly 1s ease;
+    z-index: 4;
 }
 
 .active{
@@ -71,21 +74,23 @@ html,body{
     opacity: 1;
     min-height: 100%;
     /*transition: all 1s ease;*/
-    z-index: 2;
+    z-index: 0;
 }
 
 .page {
     position: absolute;
-    transition: all 1s linear;
+    transition: all 0.5s ease;
 }
 
 @keyframes fly {
-    0%   { top:0;opacity: 1;height: 100%;}
-    100% { top: -500px;opacity: 0;height:30%;min-height: 0}
+    0%   { right:0;top:0;opacity: 1;z-index: 4;transform: rotate(0deg)}
+    70%   { right:-300px;top:-300px;opacity: 1;z-index: 4;}
+    100% { right: -500px;top:-500px;opacity: 1;z-index: 4;transform: rotate(90deg)}
 }
 @-webkit-keyframes fly {
-    0%   { top:0;opacity: 1;z-index: 0;height: 100%;}
-    100% { top: -500px;opacity: 0;height:30%;min-height: 0}
+    0%   { right:0;top:0;opacity: 1;z-index: 4;-webkit-transform: rotate(0deg)}
+    70%   { right:-300px;top:-300px;opacity: 1;z-index: 4;}
+    100% { right: -500px;top:-500px;opacity: 1;z-index: 4;-webkit-transform: rotate(90deg)}
 }
 .bg-img{
     /*width: 100%;*/
