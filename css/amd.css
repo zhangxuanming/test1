@@ -89,8 +89,9 @@ html,body{
     100% { transform: scale(0.8);top: -500px;opacity: 0;z-index: 3}
 }
 @-webkit-keyframes fly {
-    0%   { top:0 }
-    100% { transform: scale(0.1);top: -500px;}
+    0%   { top:0;opacity: 1;z-index: 0;height: 100%;}
+    30%   { top:0;opacity: 1;-webkit-transform: scale(0.8);-webkit-box-shadow: 16px 19px 12px -4px rgba(0,0,0,1); z-index: 3}
+    100% { -webkit-transform: scale(0.8);top: -500px;opacity: 0;z-index: 3}
 }
 
 @keyframes colorchange {
