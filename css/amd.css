@@ -78,7 +78,7 @@ html,body{
 
 .page {
     position: absolute;
-    transition: all 2s ease-in;
+    transition: all 1s linear;
 }
 /*-webkit-box-shadow: 13px 16px 31px -4px rgba(0,0,0,0.75);*/
 /*-moz-box-shadow: 13px 16px 31px -4px rgba(0,0,0,0.75);*/
