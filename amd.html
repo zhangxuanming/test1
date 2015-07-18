@@ -31,12 +31,12 @@
 <body>
     <div class="continer-wrapper">
         <div class="page-panel fill">
-            <div class="page fill bg-green hide page1 active" data-pi="1">
+            <div class="page fill bg-green page1 active" data-pi="1">
             </div>
             <div class="page fill bg-yellow hide page2" data-pi="2"></div>
             <div class="page fill bg-pink hide page3" data-pi="3"></div>
             <div class="page fill bg-red hide page4" data-pi="4"></div>
-            <div class="page fill bg-black hide page5" data-pi="5"></div>
+            <div class="page fill bg-dark hide page5" data-pi="5"></div>
         </div>
     </div>
 </body>
@@ -88,6 +88,7 @@
             if (!nextPage || nextPage.length < 1){
                 return
             } //啥都没选到
+
             currentPage.removeClass('active').addClass('hide');
             nextPage.removeClass('hide').addClass('active');
 //            nextPage.addClass('active');

@@ -18,9 +18,13 @@ html,body{
 .bg-pink{
     background-color: #FF5BC4;
 }
-.bg-black{
+.bg-dark{
     background-color: #444444;
 }
+.bg-black{
+    background-color: #000000;
+}
+
 .fill{
     height:100%;
     width:100%;
@@ -52,22 +56,54 @@ html,body{
 
 .hide{
     /*display: none;*/
+
+    height: 0;
     visibility: hidden;
     opacity: 0;
-    min-height: 0;
-    transition: all 3s ease;
-    position: absolute;
-    z-index: 0;
+    /*min-height: 0;*/
+    /*transform: scale(0.1);*/
+    -webkit-animation: fly 1s ease-in;
+    animation: fly 1s ease-in;
+    /*z-index: 0;*/
 }
 .active{
     /*display: block;*/
     visibility: visible;
+    top:0;
     opacity: 1;
     min-height: 100%;
-    transition: all 1s ease;
-    z-index: 2;
+    /*transition: all 1s ease;*/
+    /*z-index: 2;*/
 }
 
 .page {
-    transition: all 3s ease;
+    position: absolute;
+    transition: all 1s ease;
+}
+/*-webkit-box-shadow: 13px 16px 31px -4px rgba(0,0,0,0.75);*/
+/*-moz-box-shadow: 13px 16px 31px -4px rgba(0,0,0,0.75);*/
+/*box-shadow: 13px 16px 31px -4px rgba(0,0,0,0.75);*/
+@keyframes fly {
+    0%   { top:0;opacity: 1;z-index: 0;height: 100%;}
+    30%   { top:0;opacity: 1;transform: scale(0.8);box-shadow: 16px 19px 12px -4px rgba(0,0,0,1); z-index: 3}
+    100% { transform: scale(0.8);top: -500px;opacity: 0;z-index: 3}
+}
+@-webkit-keyframes fly {
+    0%   { top:0 }
+    100% { transform: scale(0.1);top: -500px;}
+}
+
+@keyframes colorchange {
+    /*0%   { background-color: #00F; *//* from: blue *//* }*/
+    /*25%  { background-color: #F00; *//* red        *//* }*/
+    /*50%  { background-color: #0F0; *//* green      *//* }*/
+    /*75%  { background-color: #F0F; *//* purple     *//* }*/
+    100% { background-color: #00F;min-height: 50%; /* to: blue   */ }
+}
+@-webkit-keyframes colorchange {
+    /*0%   { background-color: #00F; *//* from: blue *//* }*/
+    /*25%  { background-color: #F00; *//* red        *//* }*/
+    /*50%  { background-color: #0F0; *//* green      *//* }*/
+    /*75%  { background-color: #F0F; *//* purple     *//* }*/
+    100% { background-color: #00F; /* to: blue   */ }
 }
