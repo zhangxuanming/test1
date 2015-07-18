@@ -51,12 +51,23 @@ html,body{
 }
 
 .hide{
-    display: none;
+    /*display: none;*/
+    visibility: hidden;
+    opacity: 0;
+    min-height: 0;
+    transition: all 3s ease;
+    position: absolute;
+    z-index: 0;
 }
 .active{
-    display: block;
+    /*display: block;*/
+    visibility: visible;
+    opacity: 1;
+    min-height: 100%;
+    transition: all 1s ease;
+    z-index: 2;
 }
 
-.page1{
-    transition: all 0.3s linear;
+.page {
+    transition: all 3s ease;
 }
