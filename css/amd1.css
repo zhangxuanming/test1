@@ -1,9 +1,42 @@
 body html{
     /*font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;*/
-    font-family: Helvetica;
+    /*font-family: Helvetica;*/
     margin: 0;
     padding: 0;
     height: 100%;
+}
+
+.bg-red{
+    background-color: red;
+}
+.bg-green{
+    background-color: green;
+}
+.bg-yellow{
+    background-color: #FFD735;
+}
+.bg-pink{
+    background-color: #FF5BC4;
+}
+.bg-dark{
+    background-color: #444444;
+}
+.bg-black{
+    background-color: #000000;
+}
+
+.bg-img{
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    background-position: center ;
+}
+
+.fill{
+    height:100%;
+    width:100%;
+    min-height:100%;
 }
 .wp {
     position: absolute;
@@ -15,22 +48,11 @@ body html{
 }
 
 .page{
-    font-size: 72px;
-    line-height: 320px;
+    /*font-size: 72px;*/
+    /*line-height: 320px;*/
     text-align: center;
 }
-.page1{
-    background: red;
-}
-.page2{
-    background: yellow;
-}
-.page3{
-    background: maroon;
-}
-.page4{
-    background: green;
-}
+
 
 .bg-center{
     position:absolute;
@@ -41,19 +63,9 @@ body html{
     margin-left:auto;
     margin-right:auto;
 }
+
 .light{
     -webkit-box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
     -moz-box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
     box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
-}
-
-.container {
-    height:100%;
-}
-
-.fill{
-    width:100%;
-    height:100%;
-    min-height:100%;
-    max-height: 100%;
 }
