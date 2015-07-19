@@ -62,15 +62,12 @@
         return me;
     }());
 
+    var tl=null;
     $(document).ready(function(){
         amd.assignImages();
         $(".wp-inner").fullpage({
 
         });
-    });
-
-    var tl=null;
-    $(window).ready(function(){
         var p1 = $('.page1 h1');
 
         tl = new TimelineLite({paused:true});
@@ -80,6 +77,7 @@
                 .to(p1,1,{alpha:0,ease:Back.easeIn})
                 .to(p1,1,{alpha:1,ease:Back.easeIn})
     });
+
     window.onload = function(){
         tl.play();
     }
