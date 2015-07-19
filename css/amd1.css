@@ -1,9 +1,8 @@
-body html{
+*{
     /*font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;*/
     /*font-family: Helvetica;*/
     margin: 0;
     padding: 0;
-    height: 100%;
 }
 
 .bg-red{
@@ -53,6 +52,26 @@ body html{
     text-align: center;
 }
 
+h1{
+    font-size: 2em;
+    color: azure;
+    text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
+}
+@media screen and (min-width: 35.5em){
+    h1{
+        font-size: 24pt;
+    }
+}
+@media screen and (min-width: 48em){
+    h1{
+        font-size: 22pt;
+    }
+}
+@media screen and (min-width: 64em){
+    h1{
+        font-size: 24pt;
+    }
+}
 
 .bg-center{
     position:absolute;

@@ -10,39 +10,27 @@
     <meta content="email=no" name="format-detection">
     <title>AMD 的显卡刚刚的....</title>
 
-    <link rel="stylesheet" href="css/pure/pure-min.css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/pure/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
-    <!--<![endif]-->
-
     <link rel="stylesheet" href="css/amd1.css">
     <link rel="stylesheet" href="css/zepto.fullpage.css">
-    <script src="js/zepto.min.js"></script>
-    <script src="js/hammer.min.js"></script>
 
-    <style>
-        body,html{
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <script src="js/zepto.min.js"></script>
+    <!--<script src="js/hammer.min.js"></script>-->
+
 </head>
 <body>
 
 <div class="wp">
     <div class="wp-inner">
-        <div class="page page1">
-            <h1>我们的世界，我们的梦想</h1>
+        <div class="page page1" style="background-color: #222222">
+            <h1 id="123">我们的世界，我们的梦想</h1>
             <h1>尽在掌握有你有我</h1>
             <h1>繁华过尽，众望所归</h1>
         </div>
-        <div class="page page2 bg-img" data-img="1">
-
+        <div class="page page2">
+            <div class="bg-img fill" data-img="1" style="background-color: red">
+            </div>
         </div>
-        <div class="page page3 bg-img" data-img="2">3</div>
+        <div class="page page3 bg-img" data-img="2"></div>
         <div class="page page4 bg-img" data-img="3">4</div>
         <div class="page page5 bg-img" data-img="4">5</div>
         <div class="page page6 bg-img" data-img="5">6</div>
@@ -53,12 +41,14 @@
 </div>
 
 </body>
-<script src="js/gsap/minified/TimelineLite.min.js"></script>
+
+<script src="js/gsap/minified/TweenMax.min.js"></script>
 <script src="js/zepto.fullpage.js"></script>
 
 <script>
-    $(document).ready(function(){
-        var assignImages = function(){
+    var amd = (function(){
+        var me = {};
+        me.assignImages = function(){
             var imgContainers = $("[data-img]");
             var imgRes = [
 //                '01.png', '02.png', '03.png', '04.png', '05.png', '06.png', '07.png'
@@ -69,8 +59,23 @@
                 $(v).css({'background-image':'url('+imgPrefixUrl+imgRes[i]+')'});
             })
         };
-        assignImages();
-        $(".wp-inner").fullpage();
+        return me;
+    }());
+
+    $(document).ready(function(){
+        amd.assignImages();
+        $(".wp-inner").fullpage({
+
+        });
+        var p1 = $('.page1 h1');
+
+        tl = new TimelineLite();
+        tl.to(p1,1.5,{x:100,color:"red",ease:Back.easeIn})
+                .to(p1,1,{x:0,color:"white",rotation:360,ease:Back.easeIn})
+                .to(p1,1,{y:300,color:"white",rotation:-360,ease:Back.easeIn})
+                .to(p1,1,{alpha:0,ease:Back.easeIn})
+                .to(p1,1,{alpha:1,ease:Back.easeIn})
+
     });
 </script>
 </html>
