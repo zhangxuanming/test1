@@ -5,6 +5,33 @@ body html{
     padding: 0;
     height: 100%;
 }
+.wp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.page{
+    font-size: 72px;
+    line-height: 320px;
+    text-align: center;
+}
+.page1{
+    background: red;
+}
+.page2{
+    background: yellow;
+}
+.page3{
+    background: maroon;
+}
+.page4{
+    background: green;
+}
+
 .bg-center{
     position:absolute;
     top: 45%;
