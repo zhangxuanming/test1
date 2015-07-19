@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head lang = "en">
-
     <meta charset = "UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="A layout example that shows off a responsive product landing page.">
@@ -11,144 +10,31 @@
     <meta content="email=no" name="format-detection">
     <title>AMD 的显卡刚刚的....</title>
 
-    <link rel="stylesheet" href="css/pure/pure.css">
+    <link rel="stylesheet" href="css/pure/pure-min.css">
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="css/pure/grids-responsive-old-ie-min.css">
     <![endif]-->
     <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
     <!--<![endif]-->
-    <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.css">
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="js/jquery.fullPage.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate.css" />
 
-    <link rel="stylesheet" href="css/app.css?v=1">
+    <script src="js/zepto.min.js"></script>
+    <script src="js/hammer.min.js"></script>
 
-    <div id='wx_pic' style='margin:0 auto;display:none;'>
-        <img src='img/thumb.jpg' />
-    </div>
+    <style>
+        body,html{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <div id="fullpage" class="page-wrapper">
-        <div class="section page blue s1" data-anchor="slide1">
-            <div class="des row" style="height:100%;">
-                <h1 class="col-md-4 col-md-offset-4 txtsd1" style="position: relative;">我们的传奇，就此开始</h1>
-            </div>
-        </div>
-        <div class="section page red" data-anchor="slide2">
-            <div class="des row bg-img" style="height:100%; background-image:url(./img/amd_01.png)">
-                <h1 style="position: relative;">12312312312</h1>
-                <h1 style="position: relative;">12312312312</h1>
-                <h1 style="position: relative;">12312312312</h1>
-                <h1 style="position: relative;">12312312312</h1>
-                <h1 style="position: relative;">12312312312</h1>
-            </div>
-        </div>
-        <div class="section page blue" data-anchor="slide3">
-            <div class="page-content" style="background-image:url(./img/NatGeo03.jpg)">
-
-            </div>
-        </div>
-        <div class="section page yellow" data-anchor="slide4">
-            <div class="page-content" style="background-image:url(./img/NatGeo05.jpg)">
-
-            </div>
-        </div>
-        <div class="section page green" data-anchor="slide5">
-            <div class="page-content" style="background-image:url(./img/NatGeo06.jpg)">
-
-            </div>
-        </div>
-        <div class="section page green s5" data-anchor="slide6">
-            <div class="des">
-                <h1>我们的传奇，到此结束</h1>
-            </div>
-        </div>
-    </div>
-    <div class="footer">
-        <!--<div class="arbase">-->
-            <!--<div class="ar"></div>-->
-            <!--<div class="arline"></div>-->
-            <!--<div class="arline"></div>-->
-            <!--<div class="arline"></div>-->
-            <!--<div class="arline"></div>-->
-        <!--</div>-->
-        <div class="arbase">
-            <div class="al"></div>
-        </div>
-        <div class="txt">
-            这是一个slpit text 控制器 这是一个slpit text 控制器这是一个slpit text 控制器这是一个slpit text 控制器这是一个slpit text 控制器这是一个slpit text 控制器
+    <div class="pure-g" style="height: 100%">
+        <div class="pure-u-sm-1-1" style="background-color: #444444;height: 100%">
+            <h1 style="text-align: center;top: 30%;text-transform: uppercase;color: red">
+                AMD is the Best
+            </h1>
         </div>
     </div>
 </body>
-<script src="js/jquery-1.11.3.min.js"></script>
-<script type="text/javascript" src="js/jquery.fullPage.js"></script>
-<script type="text/javascript" src="js/wow.min.js"></script>
-<script type="text/javascript" src="js/gsap/uncompressed/TweenMax.js"></script>
-<script type="text/javascript" src="js/gsap/uncompressed/TimelineMax.js"></script>
-<script type="text/javascript" src="js/gsap/st.js"></script>
-<script>
-//    new WOW().init();
-    $(document).ready(function(){
-//        $("h1").click(function(e){
-//            $(this).removeClass("fadeIn").removeAttr("style").addClass("wobble");
-//            new WOW().init();
-//        });
-
-        $('#fullpage').fullpage({
-            scrollBar:true,
-            onLeave:function(index,nextIndex,direction){
-
-            },
-            afterLoad:function(anchorLink, index){
-                var thisSide = $('[data-anchor=slide'+index+']');
-                var h1 = thisSide.find('h1');
-                var tw = null;
-                switch (index){
-                    case 1:
-                        tw = TweenMax.set(h1,{x:-1000,top:"40%",alpha:0,scale:0});
-                        TweenMax.staggerTo(
-                            h1,2,
-                            {alpha:1,x:0,top:"40%",scale:1,ease:Strong.easeOut},0.3
-                        );
-                        break;
-                    case 2:
-                        tw = TweenMax.set(h1,{x:-1000,width:"0",alpha:0,rotation:0,scale:0});
-                        TweenMax.staggerTo(h1,2,{x:0,width:"100%",alpha:1,top:"30%",rotation:"360",scale:1,ease:Strong.easeOut},0.3);
-                        break;
-                    default:
-                        break;
-                }
-
-            }
-        });
-
-        var splitText = new SplitText(".txt");
-
-//        var ar = $('.arbase').children();
-        var al = $('.al');
-        var ap = $('.ap');
-
-//        TweenMax.staggerFromTo(ar,0.1,
-//                {alpha:0.3},
-//                {alpha:1,width:"-=10px",repeat:-1,borderBottomColor:"red",repeatDelay:1,yoyo:true,ease:Linear.ease},-0.1);
-//
-//        var timeLine = new TimelineMax({repeat:-1});
-//        timeLine.staggerFromTo(ar,0.5,
-//                    {opacity:1,borderBottomColor:"white"},
-//                    {opacity:0,borderBottomColor:"red",scale:0.7},-0.06)
-//                .staggerFromTo(ar,0.5,
-//                    {opacity:0},
-//                    {opacity:0.8,scale:1},-0.06);
-        TweenMax.staggerFromTo(splitText.words,1,{y:0,scale:0,color:"red"},{y:-50,scale:1,color:"white",ease:Back.easeInOut},0.1);
-        var timeLine = new TimelineMax({repeat:-1});
-        timeLine.fromTo(al,1.5,
-            {y:0,height:"0px"},
-            {y:-30,height:"30px",alpha:0,yoyo:true,ease:Linear.easeIn}
-            ,0
-        );
-//                .to(ap,1.5,{y:-50,ease:Back.easeOut},1);
-    })
-</script>
 </html>
