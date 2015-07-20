@@ -10,10 +10,13 @@
     <meta content="email=no" name="format-detection">
     <title>AMD 的显卡刚刚的....</title>
 
+    <link href='http://fonts.useso.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="css/amd1.css">
     <link rel="stylesheet" href="css/zepto.fullpage.css">
 
-    <script src="js/zepto.min.js"></script>
+    <!--<script src="js/zepto.min.js"></script>-->
+    <script src="http://libs.useso.com/js/zepto/1.1.3/zepto.min.js"></script>
     <!--<script src="js/hammer.min.js"></script>-->
 
 </head>
@@ -80,7 +83,6 @@
                 .to(p1,1,{alpha:1,ease:Back.easeIn})
                 .staggerTo(p1,1,{y:0,ease:Back.easeOut},0.1)
                 .staggerTo(p1,1,{x:1000,ease:Back.easeInOut},0.1);
-//                .to($(".page1"),1,{y:10});
     });
 
     window.onload = function(){
