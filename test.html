@@ -21,11 +21,11 @@
 
 <div class="wp">
     <div class="wp-inner">
-        <div class="page page1">
-            <div class="bg-img fill" style="background-image: url('./img/amd_01.png');background-color: #000000">
-                <h1 id="123">我们的世界，我们的梦想</h1>
-                <h1>尽在掌握有你有我</h1>
-                <h1>繁华过尽，众望所归</h1>
+        <div class="page page1" style="background-color: #000000">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd_01.png');background-color: #000000">
+                <h1 id="123" class="txt">我们的世界，我们的梦想</h1>
+                <h4 class="txt">尽在掌握有你有我</h4>
+                <h4 class="txt">繁华过尽，众望所归</h4>
             </div>
         </div>
         <div class="page page2">
@@ -68,17 +68,18 @@
     $(document).ready(function(){
         amd.assignImages();
         $(".wp-inner").fullpage();
-        var p1 = $('.page1 h1');
+
+        var p1 = $('.page1 .txt');
+        console.log(p1);
         tl = new TimelineLite({paused:true});
+        var img1 = $('.img1');
         tl.to(p1,1.5,{x:100,color:"red",ease:Back.easeIn})
                 .to(p1,1,{x:0,color:"white",rotation:360,ease:Back.easeIn})
                 .to(p1,1,{y:300,color:"white",rotation:-360,ease:Back.easeIn})
                 .to(p1,1,{alpha:0,ease:Back.easeIn})
                 .to(p1,1,{alpha:1,ease:Back.easeIn})
                 .staggerTo(p1,1,{y:0,ease:Back.easeOut},0.1)
-                .staggerTo(p1,1,{x:1000,ease:Back.easeOut},0.1)
-                .to($(".page1"),0.1,{y:10,ease:Linear.ease})
-                .to($(".page1"),0.1,{y:0,ease:Linear.ease});
+                .staggerTo(p1,1,{x:1000,ease:Back.easeInOut},0.1);
 //                .to($(".page1"),1,{y:10});
     });
 

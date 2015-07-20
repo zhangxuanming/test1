@@ -1,6 +1,20 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src:url('font/NotoSans-Regular.ttf')format('truetype');
+}
+
+/*@font-face {*/
+    /*font-family: 'Noto Sans';*/
+    /*src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');*/
+    /*src:url('font/NotoSans-Regular.ttf') format('truetype');*/
+    /*font-weight: normal;*/
+    /*font-style: normal;*/
+/*}*/
+
 *{
     /*font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;*/
     /*font-family: Helvetica;*/
+    font-family: "Noto Sans";
     margin: 0;
     padding: 0;
 }
@@ -25,11 +39,13 @@
 }
 
 .bg-img{
-    background-size: auto 100%;
     background-repeat: no-repeat;
+    background-position: center ;
+    background-size: auto 100%;
     -webkit-background-size: 100% auto;
     -moz-background-size: 100% auto;
-    background-position: center ;
+    -ms-background-size: auto 100%;;
+    -o-background-size: auto 100%;;
 }
 
 .fill{
@@ -52,25 +68,21 @@
     text-align: center;
 }
 
-h1{
-    font-size: 2em;
+h1, h2, h3, h4{
     color: azure;
     text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);
 }
 @media screen and (min-width: 35.5em){
-    h1{
-        font-size: 24pt;
-    }
+    h1{font-size: 22pt;}
+    h2{font-size: 18pt;}
 }
 @media screen and (min-width: 48em){
-    h1{
-        font-size: 22pt;
-    }
+    h1{font-size: 23pt;}
+    h2{font-size: 19pt;}
 }
 @media screen and (min-width: 64em){
-    h1{
-        font-size: 24pt;
-    }
+    h1{font-size: 24pt;}
+    h2{font-size: 20pt;}
 }
 
 .bg-center{
