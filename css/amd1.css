@@ -54,7 +54,9 @@
     min-height:100%;
 }
 .wp {
+    margin: 0 auto;
     position: absolute;
+    max-width: 640px;
     top: 0;
     left: 0;
     right: 0;
