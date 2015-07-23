@@ -34,39 +34,39 @@
                 <div style="height: 100%;position: relative;width: 100%">
                     <div class="top" style="height: 450px;position: relative">
                         <div class="" style="height: 100px;">
-                            <img src="./img/amd1/amdlogo.png" style="position: absolute;display: inline-block;top: 38px;right: 40px;">
+                            <img class="amdlogo" src="./img/amd1/amdlogo.png" style="position: absolute;display: inline-block;top: 38px;right: 40px;">
                         </div>
                         <div class="" style="height: 90px;">
-                            <img src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
+                            <img class="btxt1" src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
                         </div>
                         <div class="" style="height: 110px;">
-                            <img src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
+                            <img class="btxt2" src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt1" src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
                             </div>
                             <div class="" >
-                                <img src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt2" src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
                             </div>
                         </div>
                     </div>
                     <div class="middle" style="position:relative;height: 390px;">
-                        <div id="a1_fire" class="bg-img" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto">
+                        <div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto">
                         </div>
                         <div style="left: 0;right: 0;margin: 0 auto;">
-                            <img src="./img/amd1/hunterlogo1.png" style="position: relative;left: -20px;top: 40px;">
+                            <img class="hlog1" src="./img/amd1/hunterlogo1.png" style="position: relative;left: -20px;top: 40px;">
                         </div>
                     </div>
                     <div class="footer" style="min-height: 220px;">
                         <div style="position: absolute;left:50px;width: 150px; ">
-                            <img src="./img/amd1/qrcode.png">
+                            <img class="qrcode" src="./img/amd1/qrcode.png">
                         </div>
                         <div style="position: absolute;left:230px;width: 150px; ">
-                            <img src="./img/amd1/footertxt.png">
+                            <img class="ftxt" src="./img/amd1/footertxt.png">
                         </div>
                         <div style="position: absolute;left:450px;width: 150px; ">
-                            <img src="./img/amd1/card.png">
+                            <img class="card" src="./img/amd1/card.png">
                         </div>
 
                     </div>
@@ -124,19 +124,37 @@
 
         var p1 = $('.page1 .txt');
         tl = new TimelineLite({paused:true});
-        var img1 = $('.img1');
-        tl.set(p1,{alpha:0});
-        tl.to(p1,1.5,{alpha:1,x:100,color:"red",ease:Back.easeIn})
-                .to(p1,1,{x:0,color:"white",rotation:360,ease:Back.easeIn})
-                .to(p1,1,{y:300,color:"white",rotation:-360,ease:Back.easeIn})
-                .to(p1,1,{alpha:0,ease:Back.easeIn})
-                .to(p1,1,{alpha:1,ease:Back.easeIn})
-                .staggerTo(p1,1,{y:0,ease:Back.easeOut},0.1)
-                .staggerTo(p1,1,{x:1000,ease:Back.easeInOut},0.1);
-
+//        var img1 = $('.img1');
+//        tl.set(p1,{alpha:0});
+//        tl.to(p1,1.5,{alpha:1,x:100,color:"red",ease:Back.easeIn})
+//                .to(p1,1,{x:0,color:"white",rotation:360,ease:Back.easeIn})
+//                .to(p1,1,{y:300,color:"white",rotation:-360,ease:Back.easeIn})
+//                .to(p1,1,{alpha:0,ease:Back.easeIn})
+//                .to(p1,1,{alpha:1,ease:Back.easeIn})
+//                .staggerTo(p1,1,{y:0,ease:Back.easeOut},0.1)
+//                .staggerTo(p1,1,{x:1000,ease:Back.easeInOut},0.1);
 //        TweenMax.set($("#a1_fire"),{left:'center',width:476});
-        TweenMax.fromTo($("#a1_fire"),1,{scale:0},{scale:1});
-        TweenMax.to($("#a1_fire"),30,{rotation:360,repeat:-1,ease:Power0.easeNone});
+        var amdlogo = $('.page1 .amdlogo');
+        var btxt1 = $('.page1 .btxt1');
+        var btxt2 = $('.page1 .btxt2');
+        var ttxt1 = $('.page1 .ttxt1');
+        var ttxt2 = $('.page1 .ttxt2');
+        var bgfire = $('.page1 .bg_fire');
+        var hlogo = $('.page1 .hlog1');
+        var qrcode = $('.page1 .qrcode');
+        var ftxt = $('.page1 .ftxt');
+        var card = $('.page1 .card');
+        tl.fromTo(amdlogo,1,{top:-100},{top:38,ease:Back.easeInOut})
+                .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
+                .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
+                .fromTo(ttxt1,1,{alpha:0},{alpha:1,rotation:360,ease:Back.easeInOut})
+                .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
+                .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut})
+                .fromTo(ftxt,0.4,{alpha:0,y:-1000},{alpha:1,y:0,rotation:360,ease:Back.easeInOut})
+                .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+        TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:5},{alpha:1,scale:1,ease:Back.easeInOut});
+        TweenMax.fromTo(bgfire,3,{scale:0},{scale:1,ease:Back.easeInOut});
+        TweenMax.to(bgfire,30,{rotation:360,repeat:-1,ease:Power0.easeNone});
     });
 
     window.onload = function(){
