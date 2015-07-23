@@ -32,22 +32,42 @@
         <div class="page page1" style="background-color: #000000">
             <div class="bg-img fill img1" style="background-image: url('./img/amd1/background.jpg');">
                 <div style="height: 100%;position: relative;width: 100%">
-                    <div class="top" style="height: 20%; background-color: green;position: relative">
-
-                    </div>
-                    <div class="middle" style="top:60%;height: 60%;">
-                        <div style="background-color: #080808;margin: 0 auto">
-                            <div id="a1_fire" class="bg-img" style="position: absolute;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto">
+                    <div class="top" style="height: 450px;position: relative">
+                        <div class="" style="height: 100px;">
+                            <img src="./img/amd1/amdlogo.png" style="position: absolute;display: inline-block;top: 38px;right: 40px;">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
+                        </div>
+                        <div class="" style="height: 110px;">
+                            <img src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 70px;">
+                                <img src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
                             </div>
-                            <div style="left: 0;right: 0;margin: 0 auto;width: 470px;position: absolute;height:305px">
-                                <img src="./img/amd1/hunterlogo1.png" style="position: relative;left: -20px;top: 80px;">
+                            <div class="" >
+                                <img src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
                             </div>
                         </div>
-                        <!--<div style="position: absolute;height: 100%;width: 100%;background-color: palevioletred">-->
-                            <!--<img src="./img/amd1/fire1.png" style="position: absolute">-->
-                        <!--</div>-->
                     </div>
-                    <div class="footer" style="height: 20%;background-color: #ffff00">
+                    <div class="middle" style="position:relative;height: 390px;">
+                        <div id="a1_fire" class="bg-img" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto">
+                        </div>
+                        <div style="left: 0;right: 0;margin: 0 auto;">
+                            <img src="./img/amd1/hunterlogo1.png" style="position: relative;left: -20px;top: 40px;">
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px; ">
+                            <img src="./img/amd1/qrcode.png">
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px; ">
+                            <img src="./img/amd1/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px; ">
+                            <img src="./img/amd1/card.png">
+                        </div>
 
                     </div>
                     
@@ -115,7 +135,8 @@
                 .staggerTo(p1,1,{x:1000,ease:Back.easeInOut},0.1);
 
 //        TweenMax.set($("#a1_fire"),{left:'center',width:476});
-        TweenMax.to($("#a1_fire"),20,{rotation:360,repeat:-1,ease:Power0.easeNone});
+        TweenMax.fromTo($("#a1_fire"),1,{scale:0},{scale:1});
+        TweenMax.to($("#a1_fire"),30,{rotation:360,repeat:-1,ease:Power0.easeNone});
     });
 
     window.onload = function(){
