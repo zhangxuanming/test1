@@ -10,12 +10,14 @@
     <meta content="email=no" name="format-detection">
     <title>AMD 的显卡刚刚的....</title>
 
+    <!--360 公公cdn字体库-->
     <link href='http://fonts.useso.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/amd1.css">
     <link rel="stylesheet" href="css/zepto.fullpage.css">
 
     <!--<script src="js/zepto.min.js"></script>-->
+    <!--360公共cdn-->
     <script src="http://libs.useso.com/js/zepto/1.1.3/zepto.min.js"></script>
     <!--<script src="js/hammer.min.js"></script>-->
 
@@ -32,7 +34,7 @@
             </div>
         </div>
         <div class="page page2">
-            <div class="bg-img fill" style="background-image: url('./img/amd_02.jpg');background-color: #000000">
+            <div class="bg-img fill" style="background-image: url('./img/amd_03.jpg');background-color: #000000">
             </div>
         </div>
         <div class="page page3 bg-img" data-img="2"></div>
@@ -73,10 +75,10 @@
         $(".wp-inner").fullpage();
 
         var p1 = $('.page1 .txt');
-        console.log(p1);
         tl = new TimelineLite({paused:true});
         var img1 = $('.img1');
-        tl.to(p1,1.5,{x:100,color:"red",ease:Back.easeIn})
+        tl.set(p1,{alpha:0});
+        tl.to(p1,1.5,{alpha:1,x:100,color:"red",ease:Back.easeIn})
                 .to(p1,1,{x:0,color:"white",rotation:360,ease:Back.easeIn})
                 .to(p1,1,{y:300,color:"white",rotation:-360,ease:Back.easeIn})
                 .to(p1,1,{alpha:0,ease:Back.easeIn})
