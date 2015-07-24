@@ -11,6 +11,9 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+
     <title>AMD 的显卡刚刚的....</title>
 
     <!--360 公公cdn字体库-->
@@ -54,7 +57,7 @@
 
                     <div class="middle" style="position:relative;height: 390px;">
                         <div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto;z-index:0;">
-                            <img class="hlog1" src="./img/amd1/hunterlogo1.png" style="position: absolute;left: 0;right:0;margin:0 auto;top: 91px;">
+                            <img class="hlog1" src="./img/amd1/hunterlogo2.png" style="position: absolute;left: 0;right:0;margin:0 auto;top: 91px;">
                         </div>
                         <!--<div style="position: absolute;left: 0;right: 0;margin: 0 auto;z-index: 1">-->
                             <!--<img class="bg_fire" src="./img/amd1/fire1.png" style="position: relative;left: 35px;top: -40px;transform-style: flat;">-->
@@ -126,7 +129,11 @@
     var tl=null;
     $(document).ready(function(){
         amd.assignImages();
-        $(".wp-inner").fullpage();
+        $(".wp-inner").fullpage({
+            change:function(e){
+                console.log(e);
+            }
+        });
 
         var p1 = $('.page1 .txt');
         tl = new TimelineLite({paused:true});
@@ -158,6 +165,8 @@
                 .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut})
                 .fromTo(ftxt,0.4,{alpha:0,y:-1000},{alpha:1,y:0,rotation:360,ease:Back.easeInOut})
                 .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+//                .fromTo(bgfire,2,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
+
         TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
 //        TweenMax.set(bgfire,{scale:0});
         TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
