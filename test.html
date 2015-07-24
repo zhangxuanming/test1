@@ -52,7 +52,10 @@
                         </div>
                     </div>
                     <div class="middle" style="position:relative;height: 390px;">
-                        <div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto;z-index:0;">
+                        <!--<div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto;z-index:0;">-->
+                        <!--</div>-->
+                        <div style="position: absolute;left: 0;right: 0;margin: 0 auto;">
+                            <img class="bg_fire" src="./img/amd1/fire1.png" style="position: relative;left: 40px;top: -40px;">
                         </div>
                         <div style="left: 0;right: 0;margin: 0 auto;z-index: 2">
                             <img class="hlog1" src="./img/amd1/hunterlogo1.png" style="position: relative;left: -20px;top: 40px;">
@@ -153,6 +156,7 @@
                 .fromTo(ftxt,0.4,{alpha:0,y:-1000},{alpha:1,y:0,rotation:360,ease:Back.easeInOut})
                 .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
         TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+//        TweenMax.set(bgfire,{scale:0});
         TweenMax.fromTo(bgfire,3,{scale:0},{scale:1,ease:Back.easeInOut});
         TweenMax.to(bgfire,30,{rotation:360,repeat:-1,ease:Power0.easeNone});
     });
