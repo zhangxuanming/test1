@@ -33,7 +33,7 @@
             <div class="bg-img fill img1" style="background-image: url('./img/amd1/background.jpg');">
                 <div style="height: 100%;position: relative;width: 100%">
                     <div class="top" style="height: 450px;position: relative">
-                        <div class="" style="height: 100px;">
+                        <div class="" style="height: 90px;">
                             <img class="amdlogo" src="./img/amd1/amdlogo.png" style="position: absolute;display: inline-block;top: 38px;right: 40px;">
                         </div>
                         <div class="" style="height: 90px;">
@@ -160,7 +160,7 @@
                 .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
         TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
 //        TweenMax.set(bgfire,{scale:0});
-        TweenMax.fromTo(bgfire,3,{scale:0},{scale:1,ease:Back.easeInOut});
+        TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
         TweenMax.to(bgfire,30,{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
         TweenMax.to(hlogo,30,{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
     });
