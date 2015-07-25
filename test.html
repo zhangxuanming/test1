@@ -40,7 +40,7 @@
                     <div class="top" style="height: 450px;position: relative">
                         <div class="" style="height: 90px;">
                             <img class="amdlogo" src="./img/amd1/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
-                            <img class="amddivider" src="./img/amd1/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="ld" src="./img/amd1/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
                             <img class="chlogo" src="./img/amd1/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
                         </div>
                         <div class="" style="height: 90px;">
@@ -92,9 +92,9 @@
                 <div style="height: 100%;position: relative;width: 100%">
                     <div class="top" style="height: 450px;position: relative">
                         <div class="" style="height: 90px;">
-                            <img class="amdlogo" src="./img/amd1/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
-                            <img class="amddivider" src="./img/amd1/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
-                            <img class="chlogo" src="./img/amd1/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
                         </div>
                         <div class="" style="height: 90px;">
                             <img class="btxt1" src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
@@ -118,13 +118,13 @@
                     </div>
                     <div class="footer" style="min-height: 220px;">
                         <div style="position: absolute;left:50px;width: 150px; ">
-                            <img class="qrcode" src="./img/amd1/qrcode.png">
+                            <img class="qrcode" src="./img/global/qrcode.png">
                         </div>
                         <div style="position: absolute;left:230px;width: 150px; ">
-                            <img class="ftxt" src="./img/amd1/footertxt.png">
+                            <img class="ftxt" src="./img/global/footertxt.png">
                         </div>
                         <div style="position: absolute;left:450px;width: 150px; ">
-                            <img class="card" src="./img/amd1/card.png">
+                            <img class="card" src="./img/global/card.png">
                         </div>
                     </div>
                 </div>
@@ -208,6 +208,9 @@
             page2:function(){
                 tl = new TimelineMax({paused:true});
                 var amdlogo = $('.page2 .amdlogo');
+                var ld = $('.page2 .ld');
+                var cjlogo = $('.page2 .cjlogo');
+                console.log(ld);
                 var btxt1 = $('.page2 .btxt1');
                 var btxt2 = $('.page2 .btxt2');
                 var ttxt1 = $('.page2 .ttxt1');
@@ -218,13 +221,16 @@
                 var ftxt = $('.page2 .ftxt');
                 var card = $('.page2 .card');
                 tl.fromTo(amdlogo,1,{top:-100},{top:35,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{x:-1000,rotationY:0},{x:0,rotationY:720,ease:Back.easeInOut},"-=1")
                         .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
                         .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
                         .fromTo(ttxt1,1,{alpha:0,rotation:0},{alpha:1,rotation:360,ease:Back.easeInOut})
                         .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
                         .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut})
                         .fromTo(ftxt,0.4,{alpha:0,y:-1000},{alpha:1,y:0,rotation:360,ease:Back.easeInOut},"-=0.2")
-                        .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+                        .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut})
+                        .fromTo(hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
 
                 TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
                 TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
