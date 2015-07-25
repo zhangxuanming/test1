@@ -441,12 +441,12 @@
                 var arr = [s1,s2,s3,s4,s5];
                 TweenMax.staggerFromTo(arr,0.8,{y:-1000*Math.random(),x:-1000},{y:0,x:0,ease:Elastic.easeInOut},0.3);
 
-                var blurElement = {a:20};
-                function applyBlur()
-                {
-                    TweenMax.set(bgimg, {webkitFilter:"blur(" + blurElement.a + "px)"});
-                }
-                TweenMax.to(blurElement, 3, {a:0, onUpdate:applyBlur});
+//                var blurElement = {a:20};
+//                function applyBlur()
+//                {
+//                    TweenMax.set(bgimg, {webkitFilter:"blur(" + blurElement.a + "px)"});
+//                }
+//                TweenMax.to(blurElement, 3, {a:0, onUpdate:applyBlur});
                 tl.fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotaion:360,scale:1});
 
                 tl.restart();
