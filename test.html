@@ -130,7 +130,7 @@
         <div class="page page3">
             <div class="bg-img fill img1" style="background-image: url('./img/amd2/background.jpg');">
                 <div style="height: 100%;position: relative;width: 100%">
-                    <div class="top" style="height: 440px;position: relative">
+                    <div class="top" style="height: 420px;position: relative">
                         <div class="" style="height: 90px;">
                             <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
                             <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
@@ -152,17 +152,16 @@
                         </div>
                     </div>
 
-                    <div class="middle" style="position:relative;height: 400px;">
-                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd2/bimg.png);width: 640px;height: 370px;margin: 0 auto;z-index:0;">
+                    <div class="middle" style="position:relative;height: 430px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd2/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
                             <img class="monitor" src="./img/amd2/monitor.png" style="position: absolute;left: 36px;right:0;margin:0 auto;top: 17px;">
-                            <img class="sight1" src="./img/amd2/sight.png" style="position: absolute;left: 380px;margin:0 auto;top: 165px;">
-                            <img class="sight2" src="./img/amd2/sight.png" style="position: absolute;left: 460px;margin:0 auto;top: 200px;">
-                            <img class="sight3" src="./img/amd2/sight.png" style="position: absolute;left: 486px;margin:0 auto;top: 170px;">
-                            <img class="sight4" src="./img/amd2/sight.png" style="position: absolute;left: 490px;margin:0 auto;top: 220px;">
-                            <img class="sight5" src="./img/amd2/sight.png" style="position: absolute;left: 540px;margin:0 auto;top: 222px;">
-                            <img class="product" src="./img/amd2/cp.png" style="position: absolute;left: 370px;margin:0 auto;top: 296px;">
-
                         </div>
+                        <img class="sight1" src="./img/amd2/sight.png" style="position: absolute;left: 380px;margin:0 auto;top: 165px;">
+                        <img class="sight2" src="./img/amd2/sight.png" style="position: absolute;left: 460px;margin:0 auto;top: 200px;">
+                        <img class="sight3" src="./img/amd2/sight.png" style="position: absolute;left: 486px;margin:0 auto;top: 170px;">
+                        <img class="sight4" src="./img/amd2/sight.png" style="position: absolute;left: 490px;margin:0 auto;top: 220px;">
+                        <img class="sight5" src="./img/amd2/sight.png" style="position: absolute;left: 540px;margin:0 auto;top: 222px;">
+                        <img class="product" src="./img/amd2/cp.png" style="position: absolute;left: 370px;margin:0 auto;top: 296px;">
                     </div>
 
                     <div class="footer" style="min-height: 220px;">
@@ -408,7 +407,49 @@
                 tl.restart();
             },
             page3:function(){
+                var tl = new TimelineMax({paused:true});
+                var amdlogo = $('.page3 .amdlogo');
+                var ld = $('.page3 .ld');
+                var cjlogo = $('.page3 .cjlogo');
+                var btxt1 = $('.page3 .btxt1');
+                var btxt2 = $('.page3 .btxt2');
+                var ttxt1 = $('.page3 .ttxt1');
+                var ttxt2 = $('.page3 .ttxt2');
+                var qrcode = $('.page3 .qrcode');
+                var ftxt = $('.page3 .ftxt');
+                var card = $('.page3 .card');
 
+                var bgimg = $('.page3 .bg_bimg');
+                var s1 = $('.page3 .sight1');
+                var s2 = $('.page3 .sight2');
+                var s3 = $('.page3 .sight3');
+                var s4 = $('.page3 .sight4');
+                var s5 = $('.page3 .sight5');
+                var monitor = $('.page3 .monitor');
+                var product = $('.page3 .product');
+                tl.fromTo(amdlogo,1,{top:-100},{top:35,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{x:-1000,rotationY:0},{x:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
+                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
+                        .fromTo(ttxt1,1,{alpha:0,rotation:0},{alpha:1,rotation:360,ease:Back.easeInOut})
+                        .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
+                        .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut},"-=0.2")
+                        .fromTo(ftxt,0.4,{alpha:0,y:-1000,rotation:0},{alpha:1,y:0,rotation:360,ease:Back.easeInOut},"-=0.2")
+                        .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut},"-=0.2");
+
+                var arr = [s1,s2,s3,s4,s5];
+                TweenMax.staggerFromTo(arr,0.8,{y:-1000*Math.random(),x:-1000},{y:0,x:0,ease:Elastic.easeInOut},0.3);
+
+                var blurElement = {a:20};
+                function applyBlur()
+                {
+                    TweenMax.set(bgimg, {webkitFilter:"blur(" + blurElement.a + "px)"});
+                }
+                TweenMax.to(blurElement, 3, {a:0, onUpdate:applyBlur});
+                tl.fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotaion:360,scale:1});
+
+                tl.restart();
             },
             page4:function(){
 
