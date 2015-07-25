@@ -439,8 +439,8 @@
                         .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut},"-=0.2");
 
                 var arr = [s1,s2,s3,s4,s5];
-                TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000},{y:0,x:0,ease:Elastic.easeInOut},0.6);
-//                TweenMax.fromTo(bgimg,6,{alpha:0},{alpha:1});
+                TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000,scale:3},{y:0,x:0,scale:1,ease:Elastic.easeInOut},0.6);
+                TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
                 TweenMax.fromTo(bgimg,0.7,{y:20,x:20},{y:0,x:0,repeat:5});
                 TweenMax.fromTo(bgimg,0.7,{y:-20,x:-20},{y:0,x:0,repeat:5});
 //                var blurElement = {a:20};
@@ -449,7 +449,7 @@
 //                    TweenMax.set(bgimg, {webkitFilter:"blur(" + blurElement.a + "px)"});
 //                }
 //                TweenMax.to(blurElement, 3, {a:0, onUpdate:applyBlur});
-                tl.fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotaion:360,scale:1});
+                tl.fromTo(product,1.5,{alpha:0,rotation:0,scale:4},{alpha:1,rotaion:360,scale:1});
 
                 tl.restart();
             },
