@@ -206,11 +206,10 @@
                 console.log(1);
             },
             page2:function(){
-                tl = new TimelineMax({paused:true});
+                var tl = new TimelineMax({paused:true});
                 var amdlogo = $('.page2 .amdlogo');
                 var ld = $('.page2 .ld');
                 var cjlogo = $('.page2 .cjlogo');
-                console.log(ld);
                 var btxt1 = $('.page2 .btxt1');
                 var btxt2 = $('.page2 .btxt2');
                 var ttxt1 = $('.page2 .ttxt1');
@@ -232,10 +231,10 @@
                         .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut})
                         .fromTo(hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
 
-                TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
                 TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
-                TweenMax.to(bgfire,30,{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
-                TweenMax.to(hlogo,30,{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                TweenMax.fromTo(bgfire,25,{rotation:0},{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+                TweenMax.fromTo(hlogo,25,{rotation:0},{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
                 tl.restart();
             }
         };
