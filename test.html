@@ -187,42 +187,6 @@
         return me;
     }());
 
-    var tl=null;
-    $(document).ready(function(){
-        amd.assignImages();
-        $(".wp-inner").fullpage({
-            change:function(e){
-                var cp = $(".page"+ (e.cur+1));
-
-            }
-        });
-
-        tl = new TimelineLite({paused:true});
-        var amdlogo = $('.page2 .amdlogo');
-        var btxt1 = $('.page2 .btxt1');
-        var btxt2 = $('.page2 .btxt2');
-        var ttxt1 = $('.page2 .ttxt1');
-        var ttxt2 = $('.page2 .ttxt2');
-        var bgfire = $('.page2 .bg_fire');
-        var hlogo = $('.page2 .hlog1');
-        var qrcode = $('.page2 .qrcode');
-        var ftxt = $('.page2 .ftxt');
-        var card = $('.page2 .card');
-        tl.fromTo(amdlogo,1,{top:-100},{top:38,ease:Back.easeInOut})
-                .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
-                .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
-                .fromTo(ttxt1,1,{alpha:0},{alpha:1,rotation:360,ease:Back.easeInOut})
-                .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
-                .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut})
-                .fromTo(ftxt,0.4,{alpha:0,y:-1000},{alpha:1,y:0,rotation:360,ease:Back.easeInOut},"-=0.2")
-                .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
-
-        TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
-        TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
-        TweenMax.to(bgfire,30,{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
-        TweenMax.to(hlogo,30,{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
-    });
-
     var amdCss = {
         p0:{
 
@@ -234,17 +198,61 @@
     };
     var amdAnimation = (function(){
         var me = {};
+        var pageAnimation = {
+            page1:function(){
+                console.log(1);
+            },
+            page2:function(){
+                tl = new TimelineMax({paused:true});
+                var amdlogo = $('.page2 .amdlogo');
+                var btxt1 = $('.page2 .btxt1');
+                var btxt2 = $('.page2 .btxt2');
+                var ttxt1 = $('.page2 .ttxt1');
+                var ttxt2 = $('.page2 .ttxt2');
+                var bgfire = $('.page2 .bg_fire');
+                var hlogo = $('.page2 .hlog1');
+                var qrcode = $('.page2 .qrcode');
+                var ftxt = $('.page2 .ftxt');
+                var card = $('.page2 .card');
+                tl.fromTo(amdlogo,1,{top:-100},{top:38,ease:Back.easeInOut})
+                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
+                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
+                        .fromTo(ttxt1,1,{alpha:0,rotation:0},{alpha:1,rotation:360,ease:Back.easeInOut})
+                        .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
+                        .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut})
+                        .fromTo(ftxt,0.4,{alpha:0,y:-1000},{alpha:1,y:0,rotation:360,ease:Back.easeInOut},"-=0.2")
+                        .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
 
+                TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+                TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
+                TweenMax.to(bgfire,30,{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                TweenMax.to(hlogo,30,{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                tl.restart();
+            }
+        };
         me.play = function(pageIndex){
 
+            if (pageAnimation['page'+pageIndex]){
+                pageAnimation['page'+pageIndex]();
+            }
         };
-
         return me;
     }());
 
+    var tl=null;
+    $(document).ready(function(){
+        amd.assignImages();
+        $(".wp-inner").fullpage({
+            change:function(e){
+                amdAnimation.play((e.cur+1));
+            }
+        });
+
+    });
+
 
     window.onload = function(){
-        tl.play();
+//        tl.play();
     }
 </script>
 </html>
