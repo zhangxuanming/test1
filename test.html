@@ -270,9 +270,9 @@
         </div>
 
 
-        <!--第六页-->
+        <!--第六页女神-->
         <div class="page page6 bg-img" data-img="6">
-            <div class="bg-img fill img1" style="background-image: url('./img/amd1/background.jpg');">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd4/background.jpg');">
                 <div style="height: 100%;position: relative;width: 100%">
                     <div class="top" style="height: 450px;position: relative">
                         <div class="" style="height: 90px;">
@@ -281,34 +281,31 @@
                             <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
                         </div>
                         <div class="" style="height: 90px;">
-                            <img class="btxt1" src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
+                            <img class="btxt1 ab-center" src="./img/amd3/btxt1.png">
                         </div>
                         <div class="" style="height: 110px;">
-                            <img class="btxt2" src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
+                            <img class="btxt2 ab-center" src="./img/amd3/btxt2.png">
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1" src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt1 ab-center" src="./img/amd5/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2" src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt2 ab-center" src="./img/amd5/toptxt2.png">
                             </div>
                         </div>
                     </div>
                     <div class="middle" style="position:relative;height: 390px;">
-                        <div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto;z-index:0;">
-                            <img class="hlog1" src="./img/amd1/hunterlogo2.png" style="position: absolute;left: -10px;right:0;margin:0 auto;top: 91px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd5/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
+                            <img class="bg_bimg1 ab-center" src="./img/amd5/bimg1.png" style="top: 60px">
                         </div>
                     </div>
                     <div class="footer" style="min-height: 220px;">
-                        <div style="position: absolute;left:50px;width: 150px; ">
+                        <div style="position: absolute;left:90px;width: 150px;">
                             <img class="qrcode" src="./img/global/qrcode.png">
                         </div>
-                        <div style="position: absolute;left:230px;width: 150px; ">
+                        <div style="position: relative;left:310px;width: 150px;top:20px;">
                             <img class="ftxt" src="./img/global/footertxt.png">
-                        </div>
-                        <div style="position: absolute;left:450px;width: 150px; ">
-                            <img class="card" src="./img/global/card.png">
                         </div>
                     </div>
                 </div>
@@ -488,7 +485,7 @@
                         .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
+                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1});
                 TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
                 TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
                 tl.restart();
