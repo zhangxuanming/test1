@@ -250,7 +250,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="middle" style="position:relative;height: 380px;">
+                    <div class="middle" style="position:relative;height: 400px;">
                         <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd4/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
                             <img class="bg_bimg1 ab-center" src="./img/amd4/bimg1.png" style="top: 30px">
                         </div>
@@ -464,6 +464,7 @@
                 tl.restart();
             },
             page5:function(){
+//                狙击手
                 var page = '.page5';
                 tl.clear();
                 var amdlogo = $(page + ' .amdlogo');
@@ -486,12 +487,13 @@
                         .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1});
+                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1,clearProps:"z-index"});
                 TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
                 TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
                 tl.restart();
             },
             page6:function(){
+//                女神
                 var page = '.page6';
                 tl.clear();
                 var amdlogo = $(page + ' .amdlogo');
