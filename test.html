@@ -296,7 +296,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="middle" style="position:relative;height: 380px;">
+                    <div class="middle" style="position:relative;height: 400px;">
                         <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd5/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
                             <img class="bg_bimg1 ab-center" src="./img/amd5/bimg1.png" style="top: 60px">
                         </div>
@@ -492,7 +492,32 @@
                 tl.restart();
             },
             page6:function(){
-
+                var page = '.page6';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var btxt2 = $(page +' .btxt2');
+                var ttxt1 = $(page +' .ttxt1');
+                var ttxt2 = $(page +' .ttxt2');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var bgimg = $(page +' .bg_bimg');
+                var bgimg1 = $(page +' .bg_bimg1');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,1,{alpha:0,rotation:360},{alpha:1,rotation:0,ease:Back.easeInOut})
+                        .fromTo(btxt2,1,{alpha:0,rotation:-360},{alpha:1,rotation:0,ease:Back.easeInOut},"-=1")
+                        .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
+                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1});
+//                TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
+//                TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+                tl.restart();
             },
             page7:function(){
 
