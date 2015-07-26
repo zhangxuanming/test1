@@ -102,7 +102,10 @@ h1, h2, h3, h4{
     margin-left:auto;
     margin-right:auto;
 }
-
+.qrcode {
+    width: 141px;
+    height: 141px;
+}
 .light{
     -webkit-box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
     -moz-box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
