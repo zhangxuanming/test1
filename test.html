@@ -51,10 +51,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1" src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt1 ab-center" src="./img/amd1/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2" src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt2 ab-center" src="./img/amd1/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -98,10 +98,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1" src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt1 ab-center" src="./img/amd1/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2" src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt2 ab-center" src="./img/amd1/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -137,17 +137,17 @@
                             <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
                         </div>
                         <div class="" style="height: 90px;">
-                            <img class="btxt1" src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
+                            <img class="btxt1 ab-center" src="./img/amd2/btxt1.png">
                         </div>
                         <div class="" style="height: 110px;">
-                            <img class="btxt2" src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
+                            <img class="btxt2 ab-center" src="./img/amd2/btxt2.png">
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1" src="./img/amd2/toptxt1.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt1 ab-center" src="./img/amd2/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2" src="./img/amd2/toptxt2.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt2 ab-center" src="./img/amd2/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -388,19 +388,17 @@
                 var qrcode = $('.page2 .qrcode');
                 var ftxt = $('.page2 .ftxt');
                 var card = $('.page2 .card');
-                tl.fromTo(amdlogo,1,{top:-100},{top:35,ease:Back.easeInOut})
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{x:-1000,rotationY:0},{x:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
-                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
-                        .fromTo(ttxt1,1,{alpha:0,rotation:0},{alpha:1,rotation:360,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
-                        .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut})
-                        .fromTo(ftxt,0.4,{alpha:0,y:-1000,rotation:0},{alpha:1,y:0,rotation:360,ease:Back.easeInOut},"-=0.2")
-                        .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut})
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Strong.easeInOut})
+                        .fromTo(ttxt1,1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(ttxt2,1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo(hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
 
-                TweenMax.fromTo(bgfire,3,{scale:0,alpha:0,rotationY:0},{scale:1,alpha:1,rotationY:360,ease:Back.easeInOut});
+                TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,ease:Back.easeInOut});
                 TweenMax.fromTo(bgfire,25,{rotation:0},{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
                 TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
                 TweenMax.fromTo(hlogo,25,{rotation:0},{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
@@ -427,22 +425,22 @@
                 var s5 = $('.page3 .sight5');
                 var monitor = $('.page3 .monitor');
                 var product = $('.page3 .product');
-                tl.fromTo(amdlogo,1,{top:-100},{top:35,ease:Back.easeInOut})
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{x:-1000,rotationY:0},{x:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Back.easeInOut})
-                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Back.easeInOut})
-                        .fromTo(ttxt1,1,{alpha:0,rotation:0},{alpha:1,rotation:360,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.5,{y:1000},{y:0,ease:Back.easeInOut})
-                        .fromTo(qrcode,0.5,{alpha:0,x:-500},{alpha:1,x:0,ease:Back.easeInOut},"-=0.2")
-                        .fromTo(ftxt,0.4,{alpha:0,y:-1000,rotation:0},{alpha:1,y:0,rotation:360,ease:Back.easeInOut},"-=0.2")
-                        .fromTo(card,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut},"-=0.2");
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Strong.easeInOut})
+                        .fromTo(ttxt1,1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(ttxt2,1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1})
+                        .fromTo(product,1,{scale:1.4},{scale:1,ease:Back.easeInOut});
 
                 var arr = [s1,s2,s3,s4,s5];
-                TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000,scale:3},{y:0,x:0,scale:1,ease:Elastic.easeInOut},0.6);
+                TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000,scale:3},{y:0,x:0,scale:1,ease:Elastic.easeInOut},0.3);
                 TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
-                TweenMax.fromTo(bgimg,0.7,{y:-20,x:-20},{y:0,x:0,repeat:5});
-                tl.fromTo(product,1.5,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1});
+                TweenMax.fromTo(bgimg,0.4,{y:-20,x:-20},{y:0,x:0,repeat:5});
+
                 tl.restart();
             },
             page4:function(){

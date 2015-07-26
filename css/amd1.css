@@ -107,3 +107,5 @@ h1, h2, h3, h4{
     -moz-box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
     box-shadow: 0 0 138px 63px rgba(255,255,255,0.6);
 }
+
+.ab-center{position:absolute;left: 0;right:0;margin:0 auto;}
