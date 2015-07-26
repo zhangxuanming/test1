@@ -179,7 +179,7 @@
             </div>
         </div>
 
-        <!--第四页-->
+        <!--第四页过山车-->
         <div class="page page4 bg-img" data-img="4">
             <div class="bg-img fill img1" style="background-image: url('./img/amd3/background.jpg');">
                 <div style="height: 100%;position: relative;width: 100%">
@@ -226,7 +226,7 @@
 
         <!--第五页-->
         <div class="page page5 bg-img" data-img="5">
-            <div class="bg-img fill img1" style="background-image: url('./img/amd1/background.jpg');">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd3/background.jpg');">
                 <div style="height: 100%;position: relative;width: 100%">
                     <div class="top" style="height: 450px;position: relative">
                         <div class="" style="height: 90px;">
@@ -235,23 +235,22 @@
                             <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
                         </div>
                         <div class="" style="height: 90px;">
-                            <img class="btxt1" src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
+                            <img class="btxt1 ab-center" src="./img/amd3/btxt1.png">
                         </div>
                         <div class="" style="height: 110px;">
-                            <img class="btxt2" src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
+                            <img class="btxt2 ab-center" src="./img/amd3/btxt2.png">
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1" src="./img/amd1/toptxt1.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt1 ab-center" src="./img/amd3/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2" src="./img/amd1/toptxt2.png" style="position:absolute;left: 100px;">
+                                <img class="ttxt2 ab-center" src="./img/amd3/toptxt2.png">
                             </div>
                         </div>
                     </div>
                     <div class="middle" style="position:relative;height: 390px;">
-                        <div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto;z-index:0;">
-                            <img class="hlog1" src="./img/amd1/hunterlogo2.png" style="position: absolute;left: -10px;right:0;margin:0 auto;top: 91px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd3/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
                         </div>
                     </div>
                     <div class="footer" style="min-height: 220px;">
@@ -343,21 +342,21 @@
 <script src="js/zepto.fullpage.js"></script>
 
 <script>
-    var amd = (function(){
-        var me = {};
-        me.assignImages = function(){
-            var imgContainers = $("[data-img]");
-            var imgRes = [
-//                '01.png', '02.png', '03.png', '04.png', '05.png', '06.png', '07.png'
-                '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg'
-            ];
-            var imgPrefixUrl = './img/NatGeo';
-            $.each(imgContainers,function(i,v){
-                $(v).css({'background-image':'url('+imgPrefixUrl+imgRes[i]+')'});
-            })
-        };
-        return me;
-    }());
+//    var amd = (function(){
+//        var me = {};
+//        me.assignImages = function(){
+//            var imgContainers = $("[data-img]");
+//            var imgRes = [
+////                '01.png', '02.png', '03.png', '04.png', '05.png', '06.png', '07.png'
+//                '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg'
+//            ];
+//            var imgPrefixUrl = './img/NatGeo';
+//            $.each(imgContainers,function(i,v){
+//                $(v).css({'background-image':'url('+imgPrefixUrl+imgRes[i]+')'});
+//            })
+//        };
+//        return me;
+//    }());
 
     var amdCss = {
         p0:{
@@ -369,12 +368,13 @@
     };
     var amdAnimation = (function(){
         var me = {};
+        var tl = new TimelineMax({paused:true});
         var pageAnimation = {
             page1:function(){
 
             },
             page2:function(){
-                var tl = new TimelineMax({paused:true});
+                tl.clear();
                 var amdlogo = $('.page2 .amdlogo');
                 var ld = $('.page2 .ld');
                 var cjlogo = $('.page2 .cjlogo');
@@ -403,7 +403,7 @@
                 tl.restart();
             },
             page3:function(){
-                var tl = new TimelineMax({paused:true});
+                tl.clear();
                 var amdlogo = $('.page3 .amdlogo');
                 var ld = $('.page3 .ld');
                 var cjlogo = $('.page3 .cjlogo');
@@ -440,7 +440,7 @@
             },
             page4:function(){
                 var page = '.page4';
-                var tl = new TimelineMax({paused:true});
+                tl.clear();
                 var amdlogo = $(page + ' .amdlogo');
                 var ld = $(page +' .ld');
                 var cjlogo = $(page +' .cjlogo');
@@ -452,8 +452,6 @@
                 var ftxt = $(page +' .ftxt');
                 var card = $(page +' .card');
                 var bgimg = $(page +' .bg_bimg');
-//                var monitor = $('.page3 .monitor');
-//                var product = $('.page3 .product');
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
@@ -462,12 +460,7 @@
                         .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
-//                        .fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1})
-//                        .fromTo(product,1,{scale:1.4},{scale:1,ease:Back.easeInOut});
-//                var arr = [s1,s2,s3,s4,s5];
-//                TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000,scale:3},{y:0,x:0,scale:1,ease:Elastic.easeInOut},0.3);
                 TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
-//                TweenMax.fromTo(bgimg,0.4,{y:-20,x:-20},{y:0,x:0,repeat:5});
                 tl.restart();
             },
             page5:function(){
@@ -495,7 +488,7 @@
     }());
 
     $(document).ready(function(){
-        amd.assignImages();
+//        amd.assignImages();
 //        $(".wp-inner").fullpage({
 //            change:function(e){
 //                amdAnimation.play((e.cur+1));
