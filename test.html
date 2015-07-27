@@ -443,12 +443,12 @@
                         .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 var bgtl = new TimelineMax();
                     bgtl.to(bgimg1,1,{x:-200})
                         .to(bgimg1,1,{x:50})
                         .to(bgimg1,1,{x:0})
-                        .fromTo(bgimg,4,{alpha:0,rotation:960},{alpha:1,rotation:0});
+                        .fromTo(bgimg,4,{alpha:0,scale:3,rotation:960},{alpha:1,scale:1,rotation:0});
                 tl.restart();
             },
             page5:function(){
