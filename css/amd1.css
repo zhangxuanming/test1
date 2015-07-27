@@ -129,9 +129,6 @@ h1, h2, h3, h4{
 
 
 .control-panel-monitor{
-    padding: 1em;
-    width: 400px;
-    height: 200px;
     border: 1px solid #fff;
     -webkit-transform-style: preserve-3d;
     -o-transform-style: preserve-3d;
