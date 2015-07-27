@@ -336,6 +336,16 @@
     </div>
 </div>
 <span class="start"><b></b></span>
+<a class="music">
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+</a>
 </body>
 
 <script src="js/gsap/minified/TweenMax.min.js"></script>
@@ -539,7 +549,15 @@
 //                amdAnimation.play((e.cur+1));
 //            }
 //        });
+//        $('.music').click(function(){
 
+//        });
+        var $mv = $(".music");
+        var $bar = $(".wave");
+        var m = function(){
+            TweenMax.staggerFromTo($bar, 0.3, {top:10,alpha:1},{top:Math.random()*30 + 10,alpha:0.5, onComplete:m},0.3)
+        };
+        m();
     });
 
     window.onload = function(){
