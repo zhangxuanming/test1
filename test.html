@@ -555,11 +555,7 @@
         var $mv = $(".music");
         var $bar = $(".wave");
         var m = function(){
-            $.each($bar,function(v,i){
-//                console.log(i);
-                TweenMax.fromTo(i, 0.3, {top:10,alpha:1},{top:Math.random()*30 + 10,alpha:0.5, onComplete:m})
-            });
-//            TweenMax.staggerFromTo($bar, 0.4, {top:10,alpha:1},{top:Math.random()*30 + 10,alpha:0.5, onComplete:m},0.4)
+            TweenMax.staggerFromTo($bar, 0.4, {top:10,alpha:1},{top:Math.random()*30 + 10,alpha:0.5, onComplete:m},0.4)
         };
         m();
     });
