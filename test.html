@@ -2,11 +2,11 @@
 <html>
 <head lang = "en">
     <meta charset = "UTF-8">
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=640px, user-scalable=no">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=640, user-scalable=no">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=3.0">-->
     <!--<meta name="viewport" content="width=320, initial-scale=1.0 maximum-scale=1, user-scalable=0">-->
     <!--<meta name="viewport" id="viewportSet" content="width=320, initial-scale=1.125, maximum-scale=1.125, user-scalable=no">-->
-    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta name="description" content="AMD 盛宴">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
@@ -207,6 +207,7 @@
                     <div class="middle" style="position:relative;left:0;right:0;margin:0 auto;height: 440px;overflow: hidden">
                         <div class="bg-img bg_bimg" style="position: absolute;top:0;left: 0;right: 0;background: no-repeat center url(./img/amd3/bimg.png);width: 640px;height: 436px;margin: 0 auto;">
                         </div>
+                        <img class="bg_bimg1 ab-center" src="./img/amd3/bimg1.png" style="top: 100px;left: 200px;">
                     </div>
 
                     <div class="footer" style="min-height: 220px;position:relative;z-index: 10">
@@ -357,14 +358,6 @@
 //        return me;
 //    }());
 
-    var amdCss = {
-        p0:{
-
-        },
-        p1:{
-
-        }
-    };
     var amdAnimation = (function(){
         var me = {};
         var tl = new TimelineMax({paused:true});
