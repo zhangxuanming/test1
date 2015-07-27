@@ -556,7 +556,7 @@
             }
         });
         $('.qrcode').click(function(e){
-            TweenMax.to($(this),3,{rotation:360});
+            TweenMax.fromTo($(this),3,{rotation:0},{rotation:360});
         })
     }
 </script>
