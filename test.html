@@ -495,6 +495,8 @@
                 var card = $(page +' .card');
                 var bgimg = $(page +' .bg_bimg');
                 var bgimg1 = $(page +' .bg_bimg1');
+                var overlay = $(page +' .mOverlay');
+                console.log(overlay);
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
@@ -502,7 +504,12 @@
                         .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1});
+                TweenMax.fromTo(bgimg,3,{alpha:0},{alpha:1});
+                var td = new TimelineMax();
+                td.fromTo(bgimg,3,{alpha:0},{alpha:1})
+                        .fromTo(overlay,0.5,{alpha:0,height:0,width:1},{alpha:1,height:204,width:1})
+                        .fromTo(overlay,0.5,{width:1},{width:360})
+                        .fromTo(bgimg1,0.5,{alpha:0},{alpha:1});
                 tl.restart();
             },
             page7:function(){
