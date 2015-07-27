@@ -1,20 +1,5 @@
-@font-face {
-    font-family: 'Noto Sans';
-    /*src:url('font/NotoSans-Regular.ttf')format('truetype');*/
-}
-
-/*@font-face {*/
-    /*font-family: 'Noto Sans';*/
-    /*src: url('../fonts/fontawesome-webfont.eot?v=4.3.0');*/
-    /*src:url('font/NotoSans-Regular.ttf') format('truetype');*/
-    /*font-weight: normal;*/
-    /*font-style: normal;*/
-/*}*/
 
 *{
-    /*font-family: Tahoma, Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif;*/
-    /*font-family: Helvetica;*/
-    font-family: "Noto Sans";
     margin: 0;
     padding: 0;
 }
@@ -23,6 +8,7 @@ html, body {
     padding: 0;
     position: relative;
     height: 100%;
+    background-color: #000000;
 }
 .bg-red{
     background-color: red;

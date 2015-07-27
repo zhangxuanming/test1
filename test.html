@@ -350,21 +350,6 @@
 <script src="js/zepto.fullpage.js"></script>
 
 <script>
-//    var amd = (function(){
-//        var me = {};
-//        me.assignImages = function(){
-//            var imgContainers = $("[data-img]");
-//            var imgRes = [
-////                '01.png', '02.png', '03.png', '04.png', '05.png', '06.png', '07.png'
-//                '01.jpg', '02.jpg', '03.jpg', '04.jpg', '05.jpg', '06.jpg', '07.jpg'
-//            ];
-//            var imgPrefixUrl = './img/NatGeo';
-//            $.each(imgContainers,function(i,v){
-//                $(v).css({'background-image':'url('+imgPrefixUrl+imgRes[i]+')'});
-//            })
-//        };
-//        return me;
-//    }());
 
     var amdAnimation = (function(){
         var me = {};
@@ -390,11 +375,10 @@
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Strong.easeInOut})
-                        .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
                         .fromTo(hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
                 TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,ease:Back.easeInOut});
                 TweenMax.fromTo(bgfire,25,{rotation:0},{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
@@ -425,11 +409,10 @@
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Strong.easeInOut})
-                        .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
                         .fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1})
                         .fromTo(product,1,{scale:1.4},{scale:1,ease:Back.easeInOut});
                 var arr = [s1,s2,s3,s4,s5];
@@ -456,11 +439,10 @@
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{x:-1000},{x:0,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{x:1000},{x:0,ease:Strong.easeInOut})
-                        .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
                 TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
                 tl.restart();
             },
@@ -483,11 +465,10 @@
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,1,{alpha:0,rotation:360},{alpha:1,rotation:0,ease:Back.easeInOut})
-                        .fromTo(btxt2,1,{alpha:0,rotation:-360},{alpha:1,rotation:0,ease:Back.easeInOut},"-=1")
-                        .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
                 TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1,clearProps:"z-index"});
                 TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
                 TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
@@ -512,14 +493,11 @@
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,1,{alpha:0,rotation:360},{alpha:1,rotation:0,ease:Back.easeInOut})
-                        .fromTo(btxt2,1,{alpha:0,rotation:-360},{alpha:1,rotation:0,ease:Back.easeInOut},"-=1")
-                        .fromTo(ttxt1,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(ttxt2,0.6,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0,rotationX:360},{alpha:1,rotationX:0,ease:Back.easeInOut});
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0,y:100},{alpha:1,y:0,ease:Back.easeInOut})
                 TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1});
-//                TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
-//                TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
                 tl.restart();
             },
             page7:function(){
