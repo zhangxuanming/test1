@@ -555,6 +555,9 @@
                 amdAnimation.play((e.cur+1));
             }
         });
+        $('.qrcode').click(function(e){
+            TweenMax.to($(this),3,{rotation:360});
+        })
     }
 </script>
 </html>
