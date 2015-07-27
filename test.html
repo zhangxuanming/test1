@@ -448,8 +448,6 @@
                         .to(bgimg1,1,{x:50})
                         .to(bgimg1,1,{x:0})
                         .fromTo(bgimg,5,{alpha:0},{alpha:1});
-//                TweenMax.fromTo(bgimg1,2,{alpha:0},{alpha:1});
-//                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1});
                 tl.restart();
             },
             page5:function(){
@@ -545,10 +543,10 @@
                 status ? TweenMax.to(music,0.5,{alpha:1}):TweenMax.to(music,0.5,{alpha:0.3});
             };
             me.init = function(){
-                me.play();
+                me.soundSwitch();
                 o();
             };
-            me.play = function(){
+            me.soundSwitch = function(){
                 playSound(soundStatus);
                 swithBar(soundStatus);
                 soundStatus = !soundStatus;
@@ -556,10 +554,10 @@
             return me;
         }();
         playMusic.init();
-        $('.music').click(function(){
-//            soundStatus ? sound.play():sound.pause();
-//            soundStatus = !playMusic
-            playMusic.play();
+        $('.music').click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            playMusic.soundSwitch();
         });
     });
 
