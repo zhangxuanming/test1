@@ -312,9 +312,7 @@
                         <div class="" style="height: 170px;">
                             <img class="btxt1 ab-center" src="./img/amd6/btxt1.png">
                         </div>
-                        <!--<div class="" style="height: 110px;">-->
-                            <!--<img class="btxt2 ab-center" src="./img/amd5/btxt2.png" style="top:110px;">-->
-                        <!--</div>-->
+
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 50px;">
                                 <img class="ttxt1 ab-center" src="./img/amd6/toptxt1.png">
@@ -359,9 +357,7 @@
                         <div class="" style="height: 170px;">
                             <img class="btxt1 ab-center" src="./img/amd7/btxt1.png">
                         </div>
-                        <!--<div class="" style="height: 110px;">-->
-                        <!--<img class="btxt2 ab-center" src="./img/amd5/btxt2.png" style="top:110px;">-->
-                        <!--</div>-->
+
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 40px;">
                                 <img class="ttxt1 ab-center" src="./img/amd7/toptxt1.png">
@@ -374,11 +370,11 @@
                     <div class="middle" style="position:relative;height: 410px;">
                         <div class="bg-img bg_bimg"
                              style="position: absolute;top:-450px;left: 0;right: 0;">
-                            <img class="s1 ab-center" src="./img/amd7/s1.png">
-                            <img class="s2 ab-center" src="./img/amd7/s2.png">
-                            <img class="s3 ab-center" src="./img/amd7/s3.png">
-                            <img class="s4 ab-center" src="./img/amd7/s4.png">
-                            <img class="s5 ab-center" src="./img/amd7/s5.png">
+                            <img class="p8-si ab-center" src="./img/amd7/s1.png">
+                            <img class="p8-si ab-center" src="./img/amd7/s2.png">
+                            <img class="p8-si ab-center" src="./img/amd7/s3.png">
+                            <img class="p8-si ab-center" src="./img/amd7/s4.png">
+                            <img class="p8-si p8-sm ab-center" src="./img/amd7/s5.png">
                         </div>
                     </div>
                     <div class="footer" style="min-height: 220px;">
@@ -458,7 +454,7 @@
                             <img class="btxt1 ab-center" src="./img/amd9/btxt1.png">
                         </div>
                         <div class="" style="height: 110px;">
-                        <img class="btxt2 ab-center" src="./img/amd9/btxt2.png" >
+                            <img class="btxt2 ab-center" src="./img/amd9/btxt2.png" >
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 50px;">
@@ -630,7 +626,7 @@
                         .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 var bgtl = new TimelineMax();
-                    bgtl.to(bgimg1,1,{x:-200})
+                bgtl.to(bgimg1,1,{x:-200})
                         .to(bgimg1,1,{x:50})
                         .to(bgimg1,1,{x:0})
                         .fromTo(bgimg,4,{alpha:0,scale:3,rotation:960},{alpha:1,scale:1,rotation:0});
@@ -697,10 +693,52 @@
                 tl.restart();
             },
             page7:function(){
-
+                var page = '.page7';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var ttxt1 = $(page +' .ttxt1');
+                var ttxt2 = $(page +' .ttxt2');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var bgimg = $(page +' .bg_bimg');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(bgimg,5,{alpha:0},{alpha:1});
+                tl.restart();
             },
             page8:function(){
+                var page = '.page8';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var ttxt1 = $(page +' .ttxt1');
+                var ttxt2 = $(page +' .ttxt2');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var si = $(".p8-si");
+                var sm = $(".p8-sm");
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
+                        .staggerFromTo(si,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut},0.3)
+                        .to(si,0.3,{alpha:0.3})
+                        .to(sm,0.5,{scale:1.5,alpha:1,x:"+=40",y:"-=70",ease:Elastic.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
 
+                tl.restart();
             },
             page9:function(){
 
