@@ -46,7 +46,7 @@
                         <div id="p1-3dspace" class="ab-center" style="position:relative;width:280px ;height: 280px;perspective: 1800px;">
                             <div id="p1-3dlogo">
                                 <img class="p1-s1 ab-center front" src="./img/amd0/bimg.png">
-                                <img class="p1-s1 ab-center back" src="./img/amd0/bimg.png">
+                                <img class="p1-s1 ab-center back" src="./img/amd0/bimgb.png">
                                 <img class="p1-s1 ab-center right" src="./img/amd0/bimg.png">
                                 <img class="p1-s1 ab-center left" src="./img/amd0/bimg.png">
                                 <img class="p1-s1 ab-center top" src="./img/amd0/bimg.png">
@@ -527,6 +527,7 @@
                 var btxt1 = $('.p1-btxt1');
 
                 var _3d = $('#p1-3dlogo');
+                var _s1 = $('.p1-s1');
                 var _ftxt1 = $(".p1-ftxt1");
                 var _ftxt2 = $(".p1-ftxt2");
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
@@ -535,11 +536,8 @@
                         .fromTo(btxt1,2,{alpha:0,x:-100},{alpha:1,x:0,ease:Back.easeInOut})
                         .fromTo(_ftxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo(_ftxt2,2,{alpha:0},{alpha:1,ease:Strong.easeInOut});
-                tl1.fromTo(_3d,3,{rotationY:360},{rotationY:0})
-                        .fromTo(_3d,3,{rotationX:360},{rotationX:0})
-                        .fromTo(_3d,3,{rotationZ:360},{rotationZ:0});
-//                        .fromTo(_3d,3,{rotationX:180},{rotationX:0});
-                console.log(tl1);
+                tl1.fromTo(_3d,6,{alpha:0,y:-1000,rotationX:720},{alpha:1,y:0,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(_3d,10,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
                 tl.restart();
                 tl1.restart();
 
