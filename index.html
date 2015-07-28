@@ -2,43 +2,767 @@
 <html>
 <head lang = "en">
     <meta charset = "UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A layout example that shows off a responsive product landing page.">
+    <meta name="viewport" content="target-densitydpi=device-dpi, width=640, user-scalable=no">
+    <meta name="description" content="AMD 盛宴">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
     <meta content="email=no" name="format-detection">
+    <meta name="screen-orientation" content="portrait"><!-- uc强制竖屏 -->
+    <meta name="x5-orientation" content="portrait"><!-- QQ强制竖屏 -->
+
     <title>AMD 的显卡刚刚的....</title>
 
-    <link rel="stylesheet" href="css/pure/pure-min.css">
-    <!--[if lte IE 8]>
-    <link rel="stylesheet" href="css/pure/grids-responsive-old-ie-min.css">
-    <![endif]-->
-    <!--[if gt IE 8]><!-->
-    <link rel="stylesheet" href="css/pure/grids-responsive-min.css">
-    <!--<![endif]-->
+    <!--360 公公cdn字体库-->
+    <!--<link href='http://fonts.useso.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>-->
+
+    <link rel="stylesheet" href="css/amd1.css">
+    <link rel="stylesheet" href="css/zepto.fullpage.css">
 
     <script src="js/zepto.min.js"></script>
-    <script src="js/hammer.min.js"></script>
+    <!--<script type="text/javascript" src="../lib/soundjs-NEXT.min.js"></script>-->
 
-    <style>
-        body,html{
-            width: 100%;
-            height: 100%;
-        }
-    </style>
 </head>
 <body>
-    <div class="pure-g" style="height: 100%">
-        <div class="pure-u-1 pure-u-md-1" style="background-color: #444444;height: 100%">
-            <h1 style="text-align: center;top: 30%;text-transform: uppercase;color: red">
-                AMD is the Best
-            </h1>
+
+<div class="wp">
+    <div class="wp-inner">
+
+        <!--第一页-->
+        <div class="page page1" style="background-color: #000000">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd9/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 400px;position: relative">
+                        <div class="" style="height: 150px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 95px;">
+                            <img class="p1-btxt1 ab-center" src="./img/amd0/btxt1.png">
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 410px;">
+                        <div id="p1-3dspace" class="ab-center" style="position:relative;width:280px ;height: 280px;perspective: 1800px;">
+                            <div id="p1-3dlogo">
+                                <img class="p1-s1 ab-center front" src="./img/amd0/bimg.png">
+                                <img class="p1-s1 ab-center back" src="./img/amd0/bimgb.png">
+                                <img class="p1-s1 ab-center right" src="./img/amd0/bimg.png">
+                                <img class="p1-s1 ab-center left" src="./img/amd0/bimg.png">
+                                <img class="p1-s1 ab-center top" src="./img/amd0/bimg.png">
+                                <img class="p1-s1 ab-center bottom" src="./img/amd0/bimg.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer" style="position:relative;min-height: 220px;">
+                        <img class="p1-ftxt1 ab-center" src="./img/amd0/ftxt1.png" style="">
+                        <img class="p1-ftxt2 ab-center" src="./img/amd0/ftxt2.png" style="top: 50px;">
+                    </div>
+                </div>
+            </div>
         </div>
+
+
+        <!--第二页猎手-->
+        <div class="page page2" style="background-color: #000000">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd1/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 450px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img class="btxt1" src="./img/amd1/btxt1.png" style="position:absolute;left: 100px;">
+                        </div>
+                        <div class="" style="height: 110px;">
+                            <img class="btxt2" src="./img/amd1/btxt2.png" style="position:absolute;left: 250px;">
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 70px;">
+                                <img class="ttxt1 ab-center" src="./img/amd1/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd1/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 390px;">
+                        <div class="bg-img bg_fire" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd1/fire1.png);width: 476px;height: 487px;margin: 0 auto;z-index:0;">
+                            <img class="hlog1" src="./img/amd1/hunterlogo2.png" style="position: absolute;left: -10px;right:0;margin:0 auto;top: 91px;">
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px; ">
+                            <img class="qrcode" src="./img/global/qrcode.png">
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px; ">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px; ">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第三页三联-->
+        <div class="page page3">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd2/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 420px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img class="btxt1 ab-center" src="./img/amd2/btxt1.png">
+                        </div>
+                        <div class="" style="height: 110px;">
+                            <img class="btxt2 ab-center" src="./img/amd2/btxt2.png">
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 70px;">
+                                <img class="ttxt1 ab-center" src="./img/amd2/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd2/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="middle" style="position:relative;height: 430px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd2/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
+                            <img class="monitor" src="./img/amd2/monitor.png" style="position: absolute;left: 36px;right:0;margin:0 auto;top: 17px;">
+                        </div>
+                        <img class="sight1" src="./img/amd2/sight.png" style="position: absolute;left: 380px;margin:0 auto;top: 165px;">
+                        <img class="sight2" src="./img/amd2/sight.png" style="position: absolute;left: 460px;margin:0 auto;top: 200px;">
+                        <img class="sight3" src="./img/amd2/sight.png" style="position: absolute;left: 486px;margin:0 auto;top: 170px;">
+                        <img class="sight4" src="./img/amd2/sight.png" style="position: absolute;left: 490px;margin:0 auto;top: 220px;">
+                        <img class="sight5" src="./img/amd2/sight.png" style="position: absolute;left: 540px;margin:0 auto;top: 222px;">
+                        <img class="product" src="./img/amd2/cp.png" style="position: absolute;left: 370px;margin:0 auto;top: 296px;">
+                    </div>
+
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px; ">
+                            <img class="qrcode" src="./img/global/qrcode.png">
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px; ">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px; ">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--第四页过山车-->
+        <div class="page page4 bg-img" data-img="4">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd3/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 420px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img class="btxt1 ab-center" src="./img/amd2/btxt1.png">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img class="btxt2 ab-center" src="./img/amd2/btxt2.png">
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 70px;">
+                                <img class="ttxt1 ab-center" src="./img/amd3/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd3/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;left:0;right:0;margin:0 auto;height: 440px;overflow: hidden">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:0;left: 0;right: 0;background: no-repeat center url(./img/amd3/bimg.png);width: 640px;height: 436px;margin: 0 auto;">
+                        </div>
+                        <img class="bg_bimg1 ab-center" src="./img/amd3/bimg1.png" style="top: 100px;left: 200px;">
+                    </div>
+
+                    <div class="footer" style="min-height: 220px;position:relative;z-index: 10">
+                        <div style="position: absolute;left:50px;width: 150px; ">
+                            <img class="qrcode" src="./img/global/qrcode.png">
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px; ">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px; ">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第五页狙击-->
+        <div class="page page5 bg-img" data-img="5">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd4/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 420px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img class="btxt1 ab-center" src="./img/amd4/btxt1.png">
+                        </div>
+                        <div class="" style="height: 80px;">
+                            <img class="btxt2 ab-center" src="./img/amd4/btxt2.png">
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 70px;">
+                                <img class="ttxt1 ab-center" src="./img/amd4/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd4/toptxt2.png" style="z-index: 10">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 400px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd4/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
+                            <img class="bg_bimg1 ab-center" src="./img/amd4/bimg1.png" style="top: 30px">
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px;">
+                            <img class="qrcode" src="./img/global/qrcode.png" >
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px;">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px;">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第六页女神-->
+        <div class="page page6 bg-img" data-img="6">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd4/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 430px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 90px;">
+                            <img class="btxt1 ab-center" src="./img/amd5/btxt1.png" style="top:40px">
+                        </div>
+                        <div class="" style="height: 110px;">
+                            <img class="btxt2 ab-center" src="./img/amd5/btxt2.png" style="top:110px;">
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 70px;">
+                                <img class="ttxt1 ab-center" src="./img/amd5/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd5/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 380px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-30px;left: 0;right: 0;background: no-repeat center url(./img/amd5/bimg.png);width: 640px;height: 400px;margin: 0 auto;z-index:0;">
+                            <img class="bg_bimg1 ab-center" src="./img/amd5/bimg1.png" style="top: 60px">
+                            <div class="mOverlay control-panel-monitor ab-center" style="top:60px;width: 360px;height: 203px;"></div>
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:90px;width: 150px;">
+                            <img class="qrcode" src="./img/global/qrcode.png">
+                        </div>
+                        <div style="position: relative;left:310px;width: 150px;top:20px;">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第七页五连屏-->
+        <div class="page page7 bg-img" data-img="7">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd4/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 430px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 170px;">
+                            <img class="btxt1 ab-center" src="./img/amd6/btxt1.png">
+                        </div>
+                        <!--<div class="" style="height: 110px;">-->
+                            <!--<img class="btxt2 ab-center" src="./img/amd5/btxt2.png" style="top:110px;">-->
+                        <!--</div>-->
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 50px;">
+                                <img class="ttxt1 ab-center" src="./img/amd6/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd6/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 400px;">
+                        <div class="bg-img bg_bimg"
+                             style="position: absolute;top:-30px;left: 0;right: 0;">
+                            <img class="bg_bimg1 ab-center" src="./img/amd6/bimg.png" style="top: -50px">
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px;">
+                            <img class="qrcode" src="./img/global/qrcode.png" >
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px;">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px;">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第八页招聘-->
+        <div class="page page8 bg-img" data-img="8">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd4/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 430px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 170px;">
+                            <img class="btxt1 ab-center" src="./img/amd7/btxt1.png">
+                        </div>
+                        <!--<div class="" style="height: 110px;">-->
+                        <!--<img class="btxt2 ab-center" src="./img/amd5/btxt2.png" style="top:110px;">-->
+                        <!--</div>-->
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 40px;">
+                                <img class="ttxt1 ab-center" src="./img/amd7/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd7/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 410px;">
+                        <div class="bg-img bg_bimg"
+                             style="position: absolute;top:-450px;left: 0;right: 0;">
+                            <img class="s1 ab-center" src="./img/amd7/s1.png">
+                            <img class="s2 ab-center" src="./img/amd7/s2.png">
+                            <img class="s3 ab-center" src="./img/amd7/s3.png">
+                            <img class="s4 ab-center" src="./img/amd7/s4.png">
+                            <img class="s5 ab-center" src="./img/amd7/s5.png">
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px;">
+                            <img class="qrcode" src="./img/global/qrcode.png" >
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px;">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px;">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第九页主机-->
+        <div class="page page9 bg-img" data-img="9">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd4/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 430px;position: relative">
+                        <div class="" style="height: 90px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 205px;">
+                            <img class="btxt1 ab-center" src="./img/amd8/btxt1.png">
+                        </div>
+                        <!--<div class="" style="height: 110px;">-->
+                        <!--<img class="btxt2 ab-center" src="./img/amd5/btxt2.png" style="top:110px;">-->
+                        <!--</div>-->
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 50px;">
+                                <img class="ttxt1 ab-center" src="./img/amd8/toptxt1.png">
+                            </div>
+                            <div class="" >
+                                <img class="ttxt2 ab-center" src="./img/amd8/toptxt2.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 400px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;top:-20px;left: 0;right: 0;">
+                            <img class=" ab-center" src="./img/amd8/bimg.png">
+                            <img class="" src="./img/amd8/bimg1.png" style="position:absolute;left:0;top: 90px;">
+                        </div>
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <div style="position: absolute;left:50px;width: 150px;">
+                            <img class="qrcode" src="./img/global/qrcode.png" >
+                        </div>
+                        <div style="position: absolute;left:230px;width: 150px;">
+                            <img class="ftxt" src="./img/global/footertxt.png">
+                        </div>
+                        <div style="position: absolute;left:450px;width: 150px;">
+                            <img class="card" src="./img/global/card.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--第十页结尾-->
+        <div class="page page10 bg-img" data-img="10">
+            <div class="bg-img fill img1" style="background-image: url('./img/amd9/background.jpg');">
+                <div style="height: 100%;position: relative;width: 100%">
+                    <div class="top" style="height: 430px;position: relative">
+                        <div class="" style="height: 230px;">
+                            <img class="amdlogo" src="./img/global/amdlogo.png" style="position: absolute;display: inline-block;top: 35px;right: 125px;">
+                            <img class="ld" src="./img/global/logodivider.png" style="position: absolute;display: inline-block;top: 27px;right: 105px;">
+                            <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
+                        </div>
+                        <div class="" style="height: 95px;">
+                            <img class="btxt1 ab-center" src="./img/amd9/btxt1.png">
+                        </div>
+                        <div class="" style="height: 110px;">
+                        <img class="btxt2 ab-center" src="./img/amd9/btxt2.png" >
+                        </div>
+                        <div class="" style="height: 150px;">
+                            <div class="" style="height: 50px;">
+                                <img class="ttxt1 ab-center" src="./img/amd9/logo1.png">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="middle" style="position:relative;height: 410px;">
+                        <div class="bg-img bg_bimg" style="position: absolute;
+                        background: no-repeat center url(./img/amd9/bimg1.png);
+                        top:-250px;left: 0;right: 0;width: 640px;height: 400px;">
+                        </div>
+                        <img class="s1" src="./img/amd9/s1.png" style="position: absolute;top:100px;left: 100px;">
+                        <img class="s2" src="./img/amd9/s2.png" style="position: absolute;top:250px;left: 400px;">
+                        <img class="s3" src="./img/amd9/s3.png" style="position: absolute;top:300px;left:500px;">
+                        <img class="s3" src="./img/amd9/y1.png" style="position: absolute;top:0;left:100px;">
+                        <img class="s3" src="./img/amd9/y2.png" style="position: absolute;top:-100px;left:200px;">
+                        <img class="s3" src="./img/amd9/y3.png" style="position: absolute;top:-300px;left:300px;">
+                        <img class="s3" src="./img/amd9/y4.png" style="position: absolute;top:0;left:500px;">
+                        <img class="s3" src="./img/amd9/y5.png" style="position: absolute;top:0;left:500px;">
+                    </div>
+                    <div class="footer" style="min-height: 220px;">
+                        <img class=" ab-center" src="./img/amd9/ftxt1.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--结束-->
     </div>
+</div>
+<span class="start"><b></b></span>
+<button class="music">
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+    <span class="wave"></span>
+</button>
+<audio id="sound">
+    <source src="./src/M-GameBG.mp3">
+</audio>
 </body>
-<script src="js/gsap/minified/TimelineLite.min.js"></script>
+
+<script src="js/gsap/minified/TweenMax.min.js"></script>
+<script src="js/zepto.fullpage.js"></script>
+
 <script>
 
+    var amdAnimation = (function(){
+        var me = {};
+        var tl = new TimelineMax({paused:true});
+        var tl1 = new TimelineMax({paused:true});
+        var tl2 = new TimelineMax({paused:true});
+        var pageAnimation = {
+            page1:function(){
+//                起始页
+                tl.clear();
+                tl1.clear();
+                var amdlogo = $('.page1 .amdlogo');
+                var ld = $('.page1 .ld');
+                var cjlogo = $('.page1 .cjlogo');
+                var btxt1 = $('.p1-btxt1');
+                var page1 = $(".page1");
+                var _3d = $('#p1-3dlogo');
+                var _ftxt1 = $(".p1-ftxt1");
+                var _ftxt2 = $(".p1-ftxt2");
+                tl.to(page1,2,{alpha:1})
+                        .fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,2,{alpha:0,x:-100},{alpha:1,x:0,ease:Back.easeInOut})
+                        .fromTo(_ftxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(_ftxt2,2,{alpha:0},{alpha:1,ease:Strong.easeInOut});
+                tl1.fromTo(_3d,6,{alpha:0,y:-1000,rotationX:720},{alpha:1,y:0,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(_3d,15,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+                tl.restart();
+                tl1.restart();
+
+            },
+            page2:function(){
+//                猎人
+                tl.clear();
+                var amdlogo = $('.page2 .amdlogo');
+                var ld = $('.page2 .ld');
+                var cjlogo = $('.page2 .cjlogo');
+                var btxt1 = $('.page2 .btxt1');
+                var btxt2 = $('.page2 .btxt2');
+                var ttxt1 = $('.page2 .ttxt1');
+                var ttxt2 = $('.page2 .ttxt2');
+                var bgfire = $('.page2 .bg_fire');
+                var hlogo = $('.page2 .hlog1');
+                var qrcode = $('.page2 .qrcode');
+                var ftxt = $('.page2 .ftxt');
+                var card = $('.page2 .card');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
+                TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(bgfire,25,{rotation:0},{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+                TweenMax.fromTo(hlogo,25,{rotation:0},{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                tl.restart();
+            },
+            page3:function(){
+//                三联屏
+                tl.clear();
+                var amdlogo = $('.page3 .amdlogo');
+                var ld = $('.page3 .ld');
+                var cjlogo = $('.page3 .cjlogo');
+                var btxt1 = $('.page3 .btxt1');
+                var btxt2 = $('.page3 .btxt2');
+                var ttxt1 = $('.page3 .ttxt1');
+                var ttxt2 = $('.page3 .ttxt2');
+                var qrcode = $('.page3 .qrcode');
+                var ftxt = $('.page3 .ftxt');
+                var card = $('.page3 .card');
+                var bgimg = $('.page3 .bg_bimg');
+                var s1 = $('.page3 .sight1');
+                var s2 = $('.page3 .sight2');
+                var s3 = $('.page3 .sight3');
+                var s4 = $('.page3 .sight4');
+                var s5 = $('.page3 .sight5');
+                var monitor = $('.page3 .monitor');
+                var product = $('.page3 .product');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1})
+                        .fromTo(product,1,{scale:1.4},{scale:1,ease:Back.easeInOut});
+                var arr = [s1,s2,s3,s4,s5];
+                TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000,scale:3},{y:0,x:0,scale:1,ease:Elastic.easeInOut},0.3);
+                TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
+                TweenMax.fromTo(bgimg,0.4,{y:-20,x:-20},{y:0,x:0,repeat:5});
+                tl.restart();
+            },
+            page4:function(){
+//                过山车
+                tl.clear();
+                var amdlogo = $('.page4 .amdlogo');
+                var ld = $('.page4 .ld');
+                var cjlogo = $('.page4 .cjlogo');
+                var btxt1 = $('.page4 .btxt1');
+                var btxt2 = $('.page4 .btxt2');
+                var ttxt1 = $('.page4 .ttxt1');
+                var ttxt2 = $('.page4 .ttxt2');
+                var qrcode = $('.page4 .qrcode');
+                var ftxt = $('.page4 .ftxt');
+                var card = $('.page4 .card');
+                var bgimg = $('.page4 .bg_bimg');
+                var bgimg1 = $('.page4 .bg_bimg1');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                var bgtl = new TimelineMax();
+                    bgtl.to(bgimg1,1,{x:-200})
+                        .to(bgimg1,1,{x:50})
+                        .to(bgimg1,1,{x:0})
+                        .fromTo(bgimg,4,{alpha:0,scale:3,rotation:960},{alpha:1,scale:1,rotation:0});
+                tl.restart();
+            },
+            page5:function(){
+//                狙击手
+                var page = '.page5';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var btxt2 = $(page +' .btxt2');
+                var ttxt1 = $(page +' .ttxt1');
+                var ttxt2 = $(page +' .ttxt2');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var bgimg = $(page +' .bg_bimg');
+                var bgimg1 = $(page +' .bg_bimg1');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1,clearProps:"z-index"});
+                TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
+                TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+//                tl.restart();
+            },
+            page6:function(){
+//                女神
+                var page = '.page6';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var btxt2 = $(page +' .btxt2');
+                var ttxt1 = $(page +' .ttxt1');
+                var ttxt2 = $(page +' .ttxt2');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var bgimg = $(page +' .bg_bimg');
+                var bgimg1 = $(page +' .bg_bimg1');
+                var overlay = $(page +' .mOverlay');
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(bgimg,3,{alpha:0},{alpha:1});
+                var td = new TimelineMax();
+                td.fromTo(bgimg,3,{alpha:0},{alpha:1})
+                        .fromTo(overlay,0.5,{alpha:0,height:0,width:1},{alpha:1,height:204,width:1})
+                        .fromTo(overlay,0.5,{width:1},{width:360})
+                        .fromTo(bgimg1,0.5,{alpha:0},{alpha:1});
+                tl.restart();
+            },
+            page7:function(){
+
+            },
+            page8:function(){
+
+            },
+            page9:function(){
+
+            },
+            page10:function(){
+
+            }
+        };
+        me.play = function(pageIndex){
+            if (pageAnimation['page'+pageIndex]){
+                pageAnimation['page'+pageIndex]();
+            }
+        };
+        return me;
+    }());
+
+    $(document).ready(function(){
+
+        var playMusic = function() {
+            var me = {};
+            var bar = $(".wave");
+            var music = $(".music");
+            var sound = $('#sound').get(0);
+            var soundStatus = true;
+            var o = function () {
+                TweenMax.staggerFromTo(bar, 0.4, {top: 20}, {
+                    top: Math.random() * 30 + 20,
+                    onComplete:o
+                }, 0.4)
+            };
+            var playSound = function(status){
+                status ? sound.play():sound.pause();
+            };
+            var swithBar = function(status){
+                status ? TweenMax.to(music,0.5,{alpha:1}):TweenMax.to(music,0.5,{alpha:0.3});
+            };
+            me.init = function(){
+                me.soundSwitch();
+                o();
+            };
+            me.soundSwitch = function(){
+                playSound(soundStatus);
+                swithBar(soundStatus);
+                soundStatus = !soundStatus;
+            };
+            return me;
+        }();
+        playMusic.init();
+        $('.music').click(function(e){
+            e.preventDefault();
+            e.stopPropagation();
+            playMusic.soundSwitch();
+        });
+    });
+
+    window.onload = function(){
+        $(".wp-inner").fullpage({
+            start:0,
+            change:function(e){
+                amdAnimation.play((e.cur+1));
+            }
+        });
+    }
 </script>
 </html>
