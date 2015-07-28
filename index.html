@@ -735,7 +735,7 @@
                         .fromTo([ttxt1,ttxt2],0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
                         .staggerFromTo(si,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut},0.3)
                         .to(si,0.3,{alpha:0.3})
-                        .to(sm,0.5,{scale:1.5,alpha:1,x:"+=40",y:"-=70",ease:Elastic.easeInOut})
+                        .to(sm,0.5,{scale:1.5,alpha:1,x:40,y:-70,ease:Elastic.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
 
                 tl.restart();
