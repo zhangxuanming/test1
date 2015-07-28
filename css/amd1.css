@@ -125,6 +125,9 @@ html, body {
     background-color: #129FEA;
     padding: 1px;
 }
+.page1{
+    opacity: 0;
+}
 
 #p1-3dlogo{
     transform-style: preserve-3d;

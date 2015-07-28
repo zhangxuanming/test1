@@ -525,11 +525,12 @@
                 var ld = $('.page1 .ld');
                 var cjlogo = $('.page1 .cjlogo');
                 var btxt1 = $('.p1-btxt1');
-
+                var page1 = $(".page1");
                 var _3d = $('#p1-3dlogo');
                 var _ftxt1 = $(".p1-ftxt1");
                 var _ftxt2 = $(".p1-ftxt2");
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
+                tl.to(page1,2,{alpha:1})
+                        .fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
                         .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
                         .fromTo(btxt1,2,{alpha:0,x:-100},{alpha:1,x:0,ease:Back.easeInOut})
