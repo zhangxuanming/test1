@@ -522,6 +522,7 @@
                 var btxt1 = $('.p1-btxt1');
                 var page1 = $(".page1");
                 var _3d = $('#p1-3dlogo');
+                var _p1_s1 = $(".p1-s1");
                 var _ftxt1 = $(".p1-ftxt1");
                 var _ftxt2 = $(".p1-ftxt2");
                 tl.to(page1,2,{alpha:1})
@@ -532,7 +533,7 @@
                         .fromTo(_ftxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo(_ftxt2,2,{alpha:0},{alpha:1,ease:Strong.easeInOut});
                 tl1.fromTo(_3d,6,{y:-1000,rotationX:720},{y:0,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(_3d,20,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+                        .fromTo(_3d,4,{rotationY:0,rotationZ:0},{rotationY:360,rotationZ:360,ease:Power0.easeNone});
                 tl.restart();
                 tl1.restart();
 
