@@ -81,7 +81,7 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/amd1/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -127,7 +127,7 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/amd2/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -180,7 +180,7 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/amd3/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -227,7 +227,7 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/amd4/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png" style="z-index: 10">
@@ -273,7 +273,7 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/amd5/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -314,8 +314,8 @@
                         </div>
 
                         <div class="" style="height: 150px;">
-                            <div class="" style="height: 50px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                            <div class="" style="height: 60px;">
+                                <img class="ttxt1 ab-center" src="./img/amd6/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -359,8 +359,8 @@
                         </div>
 
                         <div class="" style="height: 150px;">
-                            <div class="" style="height: 40px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                            <div class="" style="height: 50px;">
+                                <img class="ttxt1 ab-center" src="./img/amd7/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -411,7 +411,7 @@
                         <!--</div>-->
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 50px;">
-                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/amd8/toptxt1.png">
                             </div>
                             <div class="" >
                                 <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
@@ -749,8 +749,10 @@
                 tl.fromTo(elc.p6.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
                         .fromTo(elc.p6.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
                         .fromTo(elc.p6.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(elc.p6.btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(elc.p6.btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p6.btxt1,0.5,{alpha:0,x:-1000},{alpha:1,x:1000,ease:SlowMo.ease.config(0.7, 0.7, false)})
+                        .fromTo(elc.p6.btxt2,0.5,{alpha:0,x:-1000},{alpha:1,x:1000,ease:SlowMo.ease.config(0.7, 0.7, false)})
+                        .fromTo(elc.p6.btxt1,0.5,{alpha:0,x:0},{alpha:1,x:0,ease:Back.easeInOut})
+                        .fromTo(elc.p6.btxt2,0.5,{alpha:0,x:0},{alpha:1,x:0,ease:Back.easeInOut})
                         .fromTo([elc.p6.ttxt1,elc.p6.ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo([elc.p6.qrcode,elc.p6.ftxt,elc.p6.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 TweenMax.fromTo(elc.p6.bgimg,3,{alpha:0},{alpha:1});
@@ -772,6 +774,7 @@
                         .fromTo([elc.p7.ttxt1,elc.p7.ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo([elc.p7.qrcode,elc.p7.ftxt,elc.p7.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 TweenMax.fromTo(elc.p7.bgimg,5,{alpha:0},{alpha:1});
+                TweenMax.to(elc.p7.bgimg,0.5,{ease:RoughEase.ease});
 
                 tl.restart();
             },
