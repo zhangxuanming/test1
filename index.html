@@ -81,10 +81,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/amd1/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd1/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -127,10 +127,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/amd2/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd2/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -180,10 +180,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/amd3/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd3/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -227,10 +227,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/amd4/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd4/toptxt2.png" style="z-index: 10">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png" style="z-index: 10">
                             </div>
                         </div>
                     </div>
@@ -273,10 +273,10 @@
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
-                                <img class="ttxt1 ab-center" src="./img/amd5/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd5/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -315,10 +315,10 @@
 
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 50px;">
-                                <img class="ttxt1 ab-center" src="./img/amd6/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd6/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -360,10 +360,10 @@
 
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 40px;">
-                                <img class="ttxt1 ab-center" src="./img/amd7/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd7/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -411,10 +411,10 @@
                         <!--</div>-->
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 50px;">
-                                <img class="ttxt1 ab-center" src="./img/amd8/toptxt1.png">
+                                <img class="ttxt1 ab-center" src="./img/global/toptxt1.png">
                             </div>
                             <div class="" >
-                                <img class="ttxt2 ab-center" src="./img/amd8/toptxt2.png">
+                                <img class="ttxt2 ab-center" src="./img/global/toptxt2.png">
                             </div>
                         </div>
                     </div>
@@ -494,8 +494,6 @@
     <span class="wave"></span>
     <span class="wave"></span>
     <span class="wave"></span>
-    <!--<span class="wave"></span>-->
-    <!--<span class="wave"></span>-->
 </button>
 <audio id="sound">
     <source src="./src/M-GameBG.mp3">
@@ -504,6 +502,7 @@
 
 <script src="js/gsap/minified/TweenMax.min.js"></script>
 <script src="js/zepto.fullpage.js"></script>
+<!--<script src="js/ani.js"></script>-->
 
 <script>
 
@@ -511,29 +510,162 @@
         var me = {};
         var tl = new TimelineMax({paused:true});
         var tl1 = new TimelineMax({paused:true});
+        var elc = {}; //element cache
+        //pages element
+        elc.p1 = {
+            amdlogo : $('.page1 .amdlogo'),
+            ld : $('.page1 .ld'),
+            cjlogo : $('.page1 .cjlogo'),
+            btxt1 : $('.p1-btxt1'),
+            page1 : $(".page1"),
+            _3d : $('#p1-3dlogo'),
+            _ftxt1 : $(".p1-ftxt1"),
+            _ftxt2 : $(".p1-ftxt2")
+        };
+        elc.p2 = {
+            amdlogo : $('.page2 .amdlogo'),
+            ld : $('.page2 .ld'),
+            cjlogo : $('.page2 .cjlogo'),
+            btxt1 : $('.page2 .btxt1'),
+            btxt2 : $('.page2 .btxt2'),
+            ttxt1 : $('.page2 .ttxt1'),
+            ttxt2 : $('.page2 .ttxt2'),
+            bgfire : $('.page2 .bg_fire'),
+            hlogo : $('.page2 .hlog1'),
+            qrcode : $('.page2 .qrcode'),
+            ftxt : $('.page2 .ftxt'),
+            card : $('.page2 .card')
+        };
+        elc.p3 = {
+             amdlogo : $('.page3 .amdlogo'),
+             ld : $('.page3 .ld'),
+             cjlogo : $('.page3 .cjlogo'),
+             btxt1 : $('.page3 .btxt1'),
+             btxt2 : $('.page3 .btxt2'),
+             ttxt1 : $('.page3 .ttxt1'),
+             ttxt2 : $('.page3 .ttxt2'),
+             qrcode : $('.page3 .qrcode'),
+             ftxt : $('.page3 .ftxt'),
+             card : $('.page3 .card'),
+             bgimg : $('.page3 .bg_bimg'),
+             s1 : $('.page3 .sight1'),
+             s2 : $('.page3 .sight2'),
+             s3 : $('.page3 .sight3'),
+             s4 : $('.page3 .sight4'),
+             s5 : $('.page3 .sight5'),
+             monitor : $('.page3 .monitor'),
+             product : $('.page3 .product')
+        };
+        elc.p4 = {
+             amdlogo : $('.page4 .amdlogo'),
+             ld : $('.page4 .ld'),
+             cjlogo : $('.page4 .cjlogo'),
+             btxt1 : $('.page4 .btxt1'),
+             btxt2 : $('.page4 .btxt2'),
+             ttxt1 : $('.page4 .ttxt1'),
+             ttxt2 : $('.page4 .ttxt2'),
+             qrcode : $('.page4 .qrcode'),
+             ftxt : $('.page4 .ftxt'),
+             card : $('.page4 .card'),
+             bgimg : $('.page4 .bg_bimg'),
+             bgimg1 : $('.page4 .bg_bimg1')
+        };
+        elc.p5 = {
+             amdlogo : $('.page5 .amdlogo'),
+             ld : $('.page5 .ld'),
+             cjlogo : $('.page5 .cjlogo'),
+             btxt1 : $('.page5 .btxt1'),
+             btxt2 : $('.page5 .btxt2'),
+             ttxt1 : $('.page5 .ttxt1'),
+             ttxt2 : $('.page5 .ttxt2'),
+             qrcode : $('.page5 .qrcode'),
+             ftxt : $('.page5 .ftxt'),
+             card : $('.page5 .card'),
+             bgimg : $('.page5 .bg_bimg'),
+             bgimg1 : $('.page5 .bg_bimg1')
+        };
+        elc.p6 = {
+             amdlogo : $('.page6 .amdlogo'),
+             ld : $('.page6 .ld'),
+             cjlogo : $('.page6 .cjlogo'),
+             btxt1 : $('.page6 .btxt1'),
+             btxt2 : $('.page6 .btxt2'),
+             ttxt1 : $('.page6 .ttxt1'),
+             ttxt2 : $('.page6 .ttxt2'),
+             qrcode : $('.page6 .qrcode'),
+             ftxt : $('.page6 .ftxt'),
+             card : $('.page6 .card'),
+             bgimg : $('.page6 .bg_bimg'),
+             bgimg1 : $('.page6 .bg_bimg1'),
+             overlay : $('.page6 .mOverlay')
+        };
+        elc.p7 = {
+             amdlogo : $('.page7 .amdlogo'),
+             ld : $('.page7 .ld'),
+             cjlogo : $('.page7 .cjlogo'),
+             btxt1 : $('.page7 .btxt1'),
+             ttxt1 : $('.page7 .ttxt1'),
+             ttxt2 : $('.page7 .ttxt2'),
+             qrcode : $('.page7 .qrcode'),
+             ftxt : $('.page7 .ftxt'),
+             card : $('.page7 .card'),
+             bgimg : $('.page7 .bg_bimg')
+        };
+        elc.p8 = {
+             amdlogo : $('.page8 .amdlogo'),
+             ld : $('.page8 .ld'),
+             cjlogo : $('.page8 .cjlogo'),
+             btxt1 : $('.page8 .btxt1'),
+             ttxt1 : $('.page8 .ttxt1'),
+             ttxt2 : $('.page8 .ttxt2'),
+             qrcode : $('.page8 .qrcode'),
+             ftxt : $('.page8 .ftxt'),
+             card : $('.page8 .card'),
+             si : $(".p8-si"),
+             sm : $(".p8-sm")
+        };
+        elc.p9 = {
+             amdlogo : $('.page9 .amdlogo'),
+             ld : $('.page9 .ld'),
+             cjlogo : $('.page9 .cjlogo'),
+             btxt1 : $('.page9 .btxt1'),
+             ttxt1 : $('.page9 .ttxt1'),
+             ttxt2 : $('.page9 .ttxt2'),
+             qrcode : $('.page9 .qrcode'),
+             ftxt : $('.page9 .ftxt'),
+             card : $('.page9 .card'),
+             bgimg1 : $(".p9-bimg1"),
+             bgimg2 : $(".p9-bimg2")
+        };
+        elc.p10 = {
+             amdlogo : $('.page10 .amdlogo'),
+             ld : $('.page10 .ld'),
+             cjlogo : $('.page10 .cjlogo'),
+             btxt1 : $('.page10 .btxt1'),
+             btxt2 : $('.page10 .btxt2'),
+             ttxt1 : $('.page10 .ttxt1'),
+             qrcode : $('.page10 .qrcode'),
+             ftxt : $('.page10 .ftxt'),
+             card : $('.page10 .card'),
+             bgimg : $('.page10 .bg_bimg'),
+             p10_si : $(".p10-si"),
+             ftxt1 : $(".p10-ftxt1")
+        };
+        
         var pageAnimation = {
             page1:function(){
 //                起始页
                 tl.clear();
                 tl1.clear();
-                var amdlogo = $('.page1 .amdlogo');
-                var ld = $('.page1 .ld');
-                var cjlogo = $('.page1 .cjlogo');
-                var btxt1 = $('.p1-btxt1');
-                var page1 = $(".page1");
-                var _3d = $('#p1-3dlogo');
-                var _p1_s1 = $(".p1-s1");
-                var _ftxt1 = $(".p1-ftxt1");
-                var _ftxt2 = $(".p1-ftxt2");
-                tl.to(page1,2,{alpha:1})
-                        .fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,2,{alpha:0,x:-100},{alpha:1,x:0,ease:Back.easeInOut})
-                        .fromTo(_ftxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(_ftxt2,2,{alpha:0},{alpha:1,ease:Strong.easeInOut});
-                tl1.fromTo(_3d,6,{y:-1000,rotationX:720},{y:0,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(_3d,4,{rotationY:0,rotationZ:0},{rotationY:360,rotationZ:360,ease:Power0.easeNone});
+                tl.to(elc.p1.page1,2,{alpha:1})
+                        .fromTo(elc.p1.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
+                        .fromTo(elc.p1.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p1.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p1.btxt1,2,{alpha:0,x:-100},{alpha:1,x:0,ease:Back.easeInOut})
+                        .fromTo(elc.p1._ftxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p1._ftxt2,2,{alpha:0},{alpha:1,ease:Strong.easeInOut});
+                tl1.fromTo(elc.p1._3d,6,{y:-1000,rotationX:720},{y:0,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(elc.p1._3d,4,{rotationY:0,rotationZ:0},{rotationY:360,rotationZ:360,ease:Power0.easeNone});
                 tl.restart();
                 tl1.restart();
 
@@ -541,254 +673,148 @@
             page2:function(){
 //                猎人
                 tl.clear();
-                var amdlogo = $('.page2 .amdlogo');
-                var ld = $('.page2 .ld');
-                var cjlogo = $('.page2 .cjlogo');
-                var btxt1 = $('.page2 .btxt1');
-                var btxt2 = $('.page2 .btxt2');
-                var ttxt1 = $('.page2 .ttxt1');
-                var ttxt2 = $('.page2 .ttxt2');
-                var bgfire = $('.page2 .bg_fire');
-                var hlogo = $('.page2 .hlog1');
-                var qrcode = $('.page2 .qrcode');
-                var ftxt = $('.page2 .ftxt');
-                var card = $('.page2 .card');
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo(hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
-                TweenMax.fromTo(bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,ease:Back.easeInOut});
-                TweenMax.fromTo(bgfire,25,{rotation:0},{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
-                TweenMax.fromTo(hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
-                TweenMax.fromTo(hlogo,25,{rotation:0},{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                tl.fromTo(elc.p2.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut},0)
+                        .fromTo(elc.p2.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p2.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p2.btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p2.btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p2.ttxt1,elc.p2.ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p2.qrcode,elc.p2.ftxt,elc.p2.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(elc.p2.hlogo,0.5,{scale:1},{scale:1.2,repeat:1,yoyo:true,ease:Strong.easeIn});
+                TweenMax.fromTo(elc.p2.bgfire,3,{scale:0,alpha:0},{scale:1,alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(elc.p2.bgfire,25,{rotation:0},{rotation:360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
+                TweenMax.fromTo(elc.p2.hlogo,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Back.easeInOut});
+                TweenMax.fromTo(elc.p2.hlogo,25,{rotation:0},{rotation:-360,repeat:-1,ease:Power0.easeNone,clearProps:"z-index"});
                 tl.restart();
             },
             page3:function(){
 //                三联屏
                 tl.clear();
-                var amdlogo = $('.page3 .amdlogo');
-                var ld = $('.page3 .ld');
-                var cjlogo = $('.page3 .cjlogo');
-                var btxt1 = $('.page3 .btxt1');
-                var btxt2 = $('.page3 .btxt2');
-                var ttxt1 = $('.page3 .ttxt1');
-                var ttxt2 = $('.page3 .ttxt2');
-                var qrcode = $('.page3 .qrcode');
-                var ftxt = $('.page3 .ftxt');
-                var card = $('.page3 .card');
-                var bgimg = $('.page3 .bg_bimg');
-                var s1 = $('.page3 .sight1');
-                var s2 = $('.page3 .sight2');
-                var s3 = $('.page3 .sight3');
-                var s4 = $('.page3 .sight4');
-                var s5 = $('.page3 .sight5');
-                var monitor = $('.page3 .monitor');
-                var product = $('.page3 .product');
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo(product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1})
-                        .fromTo(product,1,{scale:1.4},{scale:1,ease:Back.easeInOut});
-                var arr = [s1,s2,s3,s4,s5];
+                tl.fromTo(elc.p3.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p3.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p3.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p3.btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p3.btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p3.ttxt1,elc.p3.ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p3.qrcode,elc.p3.ftxt,elc.p3.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(elc.p3.product,1,{alpha:0,rotation:0,scale:4},{alpha:1,rotation:360,scale:1})
+                        .fromTo(elc.p3.product,1,{scale:1.4},{scale:1,ease:Back.easeInOut});
+                var arr = [elc.p3.s1,elc.p3.s2,elc.p3.s3,elc.p3.s4,elc.p3.s5];
                 TweenMax.staggerFromTo(arr,1,{y:-1000*Math.random(),x:-1000,scale:3},{y:0,x:0,scale:1,ease:Elastic.easeInOut},0.3);
-                TweenMax.fromTo(bgimg,4,{alpha:0},{alpha:1});
-                TweenMax.fromTo(bgimg,0.4,{y:-20,x:-20},{y:0,x:0,repeat:5});
+                TweenMax.fromTo(elc.p3.bgimg,4,{alpha:0},{alpha:1});
+                TweenMax.fromTo(elc.p3.bgimg,0.4,{y:-20,x:-20},{y:0,x:0,repeat:5});
                 tl.restart();
             },
             page4:function(){
 //                过山车
                 tl.clear();
-                var amdlogo = $('.page4 .amdlogo');
-                var ld = $('.page4 .ld');
-                var cjlogo = $('.page4 .cjlogo');
-                var btxt1 = $('.page4 .btxt1');
-                var btxt2 = $('.page4 .btxt2');
-                var ttxt1 = $('.page4 .ttxt1');
-                var ttxt2 = $('.page4 .ttxt2');
-                var qrcode = $('.page4 .qrcode');
-                var ftxt = $('.page4 .ftxt');
-                var card = $('.page4 .card');
-                var bgimg = $('.page4 .bg_bimg');
-                var bgimg1 = $('.page4 .bg_bimg1');
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+
+                tl.fromTo(elc.p4.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p4.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p4.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p4.btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p4.btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p4.ttxt1,elc.p4.ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p4.qrcode,elc.p4.ftxt,elc.p4.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 var bgtl = new TimelineMax();
-                    bgtl.to(bgimg1,1,{x:-200})
-                        .to(bgimg1,1,{x:50})
-                        .to(bgimg1,1,{x:0})
-                        .fromTo(bgimg,4,{alpha:0,scale:3,rotation:960},{alpha:1,scale:1,rotation:0});
+                bgtl.to(elc.p4.bgimg1,1,{x:-200})
+                        .to(elc.p4.bgimg1,1,{x:50})
+                        .to(elc.p4.bgimg1,1,{x:0})
+                        .fromTo(elc.p4.bgimg,4,{alpha:0,scale:3,rotation:960},{alpha:1,scale:1,rotation:0});
+
+
                 tl.restart();
             },
             page5:function(){
 //                狙击手
-                var page = '.page5';
                 tl.clear();
-                var amdlogo = $(page + ' .amdlogo');
-                var ld = $(page +' .ld');
-                var cjlogo = $(page +' .cjlogo');
-                var btxt1 = $(page +' .btxt1');
-                var btxt2 = $(page +' .btxt2');
-                var ttxt1 = $(page +' .ttxt1');
-                var ttxt2 = $(page +' .ttxt2');
-                var qrcode = $(page +' .qrcode');
-                var ftxt = $(page +' .ftxt');
-                var card = $(page +' .card');
-                var bgimg = $(page +' .bg_bimg');
-                var bgimg1 = $(page +' .bg_bimg1');
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg,10,{alpha:0},{alpha:1,clearProps:"z-index"});
-                TweenMax.fromTo(bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
-                TweenMax.fromTo(bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
-//                tl.restart();
+
+                tl.fromTo(elc.p5.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p5.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p5.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p5.btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p5.btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p5.ttxt1,elc.p5.ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p5.qrcode,elc.p5.ftxt,elc.p5.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(elc.p5.bgimg,10,{alpha:0},{alpha:1,clearProps:"z-index"});
+                TweenMax.fromTo(elc.p5.bgimg1,2,{alpha:0,scale:3},{alpha:1,scale:1});
+                TweenMax.fromTo(elc.p5.bgimg1,3,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+
+                tl.restart();
             },
             page6:function(){
 //                女神
-                var page = '.page6';
                 tl.clear();
-                var amdlogo = $(page + ' .amdlogo');
-                var ld = $(page +' .ld');
-                var cjlogo = $(page +' .cjlogo');
-                var btxt1 = $(page +' .btxt1');
-                var btxt2 = $(page +' .btxt2');
-                var ttxt1 = $(page +' .ttxt1');
-                var ttxt2 = $(page +' .ttxt2');
-                var qrcode = $(page +' .qrcode');
-                var ftxt = $(page +' .ftxt');
-                var card = $(page +' .card');
-                var bgimg = $(page +' .bg_bimg');
-                var bgimg1 = $(page +' .bg_bimg1');
-                var overlay = $(page +' .mOverlay');
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg,3,{alpha:0},{alpha:1});
+
+                tl.fromTo(elc.p6.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p6.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p6.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p6.btxt1,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p6.btxt2,0.3,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p6.ttxt1,elc.p6.ttxt2],0.6,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p6.qrcode,elc.p6.ftxt,elc.p6.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(elc.p6.bgimg,3,{alpha:0},{alpha:1});
                 var td = new TimelineMax();
-                td.fromTo(bgimg,3,{alpha:0},{alpha:1})
-                        .fromTo(overlay,0.5,{alpha:0,height:0,width:1},{alpha:1,height:204,width:1})
-                        .fromTo(overlay,0.5,{width:1},{width:360})
-                        .fromTo(bgimg1,0.5,{alpha:0},{alpha:1});
+                td.fromTo(elc.p6.bgimg,3,{alpha:0},{alpha:1})
+                        .fromTo(elc.p6.overlay,0.5,{alpha:0,height:0,width:1},{alpha:1,height:204,width:1})
+                        .fromTo(elc.p6.overlay,0.5,{width:1},{width:360})
+                        .fromTo(elc.p6.bgimg1,0.5,{alpha:0},{alpha:1});
+
                 tl.restart();
             },
             page7:function(){
-                var page = '.page7';
                 tl.clear();
-                var amdlogo = $(page + ' .amdlogo');
-                var ld = $(page +' .ld');
-                var cjlogo = $(page +' .cjlogo');
-                var btxt1 = $(page +' .btxt1');
-                var ttxt1 = $(page +' .ttxt1');
-                var ttxt2 = $(page +' .ttxt2');
-                var qrcode = $(page +' .qrcode');
-                var ftxt = $(page +' .ftxt');
-                var card = $(page +' .card');
-                var bgimg = $(page +' .bg_bimg');
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg,5,{alpha:0},{alpha:1});
+
+                tl.fromTo(elc.p7.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p7.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p7.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p7.btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p7.ttxt1,elc.p7.ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p7.qrcode,elc.p7.ftxt,elc.p7.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(elc.p7.bgimg,5,{alpha:0},{alpha:1});
+
                 tl.restart();
             },
             page8:function(){
-                var page = '.page8';
                 tl.clear();
-                var amdlogo = $(page + ' .amdlogo');
-                var ld = $(page +' .ld');
-                var cjlogo = $(page +' .cjlogo');
-                var btxt1 = $(page +' .btxt1');
-                var ttxt1 = $(page +' .ttxt1');
-                var ttxt2 = $(page +' .ttxt2');
-                var qrcode = $(page +' .qrcode');
-                var ftxt = $(page +' .ftxt');
-                var card = $(page +' .card');
-                var si = $(".p8-si");
-                var sm = $(".p8-sm");
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
-                        .fromTo([ttxt1,ttxt2],0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
-                        .staggerFromTo(si,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut},0.3)
-                        .to(si,0.3,{alpha:0.3})
-                        .to(sm,0.5,{scale:1.5,alpha:1,x:40,y:-70,ease:Elastic.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                tl.fromTo(elc.p8.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p8.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p8.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p8.btxt1,0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
+                        .fromTo([elc.p8.ttxt1,elc.p8.ttxt2],0.6,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut})
+                        .staggerFromTo(elc.p8.si,0.5,{alpha:0,scale:3},{alpha:1,scale:1,ease:Elastic.easeInOut},0.3)
+                        .to(elc.p8.si,0.3,{alpha:0.3})
+                        .to(elc.p8.sm,0.5,{scale:1.5,alpha:1,x:40,y:-70,ease:Elastic.easeInOut})
+                        .fromTo([elc.p8.qrcode,elc.p8.ftxt,elc.p8.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
 
                 tl.restart();
             },
             page9:function(){
-                var page = '.page9';
                 tl.clear();
-                var amdlogo = $(page + ' .amdlogo');
-                var ld = $(page +' .ld');
-                var cjlogo = $(page +' .cjlogo');
-                var btxt1 = $(page +' .btxt1');
-                var ttxt1 = $(page +' .ttxt1');
-                var ttxt2 = $(page +' .ttxt2');
-                var qrcode = $(page +' .qrcode');
-                var ftxt = $(page +' .ftxt');
-                var card = $(page +' .card');
-                var bgimg1 = $(".p9-bimg1");
-                var bgimg2 = $(".p9-bimg2");
-                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo([ttxt1,ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
-                TweenMax.fromTo(bgimg1,5,{alpha:0},{alpha:1});
-                TweenMax.fromTo(bgimg2,1,{x:-500},{x:0,ease:Back.easeInOut});
+                tl.fromTo(elc.p9.amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p9.ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p9.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p9.btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([elc.p9.ttxt1,elc.p9.ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([elc.p9.qrcode,elc.p9.ftxt,elc.p9.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(elc.p9.bgimg1,5,{alpha:0},{alpha:1});
+                TweenMax.fromTo(elc.p9.bgimg2,1,{x:-500},{x:0,ease:Back.easeInOut});
+
                 tl.restart();
             },
             page10:function(){
-                var page = '.page10';
                 tl.clear();
-                var amdlogo = $(page + ' .amdlogo');
-                var ld = $(page +' .ld');
-                var cjlogo = $(page +' .cjlogo');
-                var btxt1 = $(page +' .btxt1');
-                var btxt2 = $(page +' .btxt2');
-                var ttxt1 = $(page +' .ttxt1');
-                var qrcode = $(page +' .qrcode');
-                var ftxt = $(page +' .ftxt');
-                var card = $(page +' .card');
-                var bgimg = $(page +' .bg_bimg');
-                var p10_si = $(".p10-si");
-                var ftxt1 = $(".p10-ftxt1");
-                tl.fromTo(amdlogo,0.5,{y:-100},{y:0,ease:Back.easeInOut})
-                        .fromTo(ld,1,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
-                        .fromTo(cjlogo,1,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
-                        .fromTo(btxt1,0.5,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(btxt2,0.5,{alpha:0},{alpha:1,ease:Strong.easeInOut})
-                        .fromTo(ttxt1,1,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo(ftxt1,1.5,{y:1000,alpha:0},{y:0,alpha:1})
-                        .fromTo(bgimg,3,{y:-1000,rotationY:980,alpha:0},{y:0,rotationY:0,alpha:1,ease:Back.easeInOut},0);
-                TweenMax.staggerFromTo(p10_si,0.2,{alpha:0},{alpha:1},0.1);
-                TweenMax.fromTo(p10_si,5,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+                tl.fromTo(elc.p10.amdlogo,0.5,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(elc.p10.ld,1,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(elc.p10.cjlogo,1,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(elc.p10.btxt1,0.5,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p10.btxt2,0.5,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(elc.p10.ttxt1,1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(elc.p10.ftxt1,1.5,{y:1000,alpha:0},{y:0,alpha:1})
+                        .fromTo(elc.p10.bgimg,3,{y:-1000,rotationY:980,alpha:0},{y:0,rotationY:0,alpha:1,ease:Back.easeInOut},0);
+                TweenMax.staggerFromTo(elc.p10.p10_si,0.2,{alpha:0},{alpha:1},0.1);
+                TweenMax.fromTo(elc.p10.p10_si,5,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+
                 tl.restart();
             }
         };
@@ -800,8 +826,8 @@
         return me;
     }());
 
-    $(document).ready(function(){
 
+    $(document).ready(function(){
         var playMusic = function() {
             var me = {};
             var bar = $(".wave");
