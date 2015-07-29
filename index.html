@@ -173,10 +173,10 @@
                             <img class="cjlogo" src="./img/global/cj.png" style="position: absolute;display: inline-block;top: 20px;right: 35px;">
                         </div>
                         <div class="" style="height: 90px;">
-                            <img class="btxt1 ab-center" src="./img/amd2/btxt1.png">
+                            <img class="btxt1 ab-center" src="./img/amd3/btxt1.png">
                         </div>
                         <div class="" style="height: 90px;">
-                            <img class="btxt2 ab-center" src="./img/amd2/btxt2.png">
+                            <img class="btxt2 ab-center" src="./img/amd3/btxt2.png">
                         </div>
                         <div class="" style="height: 150px;">
                             <div class="" style="height: 70px;">
@@ -772,9 +772,10 @@
                         .fromTo(elc.p7.cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
                         .fromTo(elc.p7.btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo([elc.p7.ttxt1,elc.p7.ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
-                        .fromTo([elc.p7.qrcode,elc.p7.ftxt,elc.p7.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                        .fromTo([elc.p7.qrcode,elc.p7.ftxt,elc.p7.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(elc.p7.bgimg,1,{x:-5,y:-5},{x:5,y:5,repeat:3,ease:RoughEase.ease});
                 TweenMax.fromTo(elc.p7.bgimg,5,{alpha:0},{alpha:1});
-                TweenMax.fromTo(elc.p7.bgimg,0.5,{x:20},{x:0,ease:RoughEase.ease});
+//                TweenMax.fromTo(elc.p7.bgimg,1,{x:-5,y:-5},{x:5,y:5,repeat:-1,ease:RoughEase.ease});
 
                 tl.restart();
             },
