@@ -420,8 +420,8 @@
                     </div>
                     <div class="middle" style="position:relative;height: 400px;">
                         <div class="bg-img bg_bimg" style="position: absolute;top:-20px;left: 0;right: 0;">
-                            <img class=" ab-center" src="./img/amd8/bimg.png">
-                            <img class="" src="./img/amd8/bimg1.png" style="position:absolute;left:0;top: 90px;">
+                            <img class="p9-bimg1 ab-center" src="./img/amd8/bimg.png">
+                            <img class="p9-bimg2" src="./img/amd8/bimg1.png" style="position:absolute;left:0;top: 90px;">
                         </div>
                     </div>
                     <div class="footer" style="min-height: 220px;">
@@ -467,17 +467,17 @@
                         background: no-repeat center url(./img/amd9/bimg1.png);
                         top:-250px;left: 0;right: 0;width: 640px;height: 400px;">
                         </div>
-                        <img class="s1" src="./img/amd9/s1.png" style="position: absolute;top:100px;left: 100px;">
-                        <img class="s2" src="./img/amd9/s2.png" style="position: absolute;top:250px;left: 400px;">
-                        <img class="s3" src="./img/amd9/s3.png" style="position: absolute;top:300px;left:500px;">
-                        <img class="s3" src="./img/amd9/y1.png" style="position: absolute;top:0;left:100px;">
-                        <img class="s3" src="./img/amd9/y2.png" style="position: absolute;top:-100px;left:200px;">
-                        <img class="s3" src="./img/amd9/y3.png" style="position: absolute;top:-300px;left:300px;">
-                        <img class="s3" src="./img/amd9/y4.png" style="position: absolute;top:0;left:500px;">
-                        <img class="s3" src="./img/amd9/y5.png" style="position: absolute;top:0;left:500px;">
+                        <img class="p10-si" src="./img/amd9/s1.png" style="position: absolute;top:100px;left: 100px;">
+                        <img class="p10-si" src="./img/amd9/s2.png" style="position: absolute;top:250px;left: 400px;">
+                        <img class="p10-si" src="./img/amd9/s3.png" style="position: absolute;top:300px;left:500px;">
+                        <img class="p10-si" src="./img/amd9/y1.png" style="position: absolute;top:0;left:100px;">
+                        <img class="p10-si" src="./img/amd9/y2.png" style="position: absolute;top:-100px;left:200px;">
+                        <img class="p10-si" src="./img/amd9/y3.png" style="position: absolute;top:-300px;left:300px;">
+                        <img class="p10-si" src="./img/amd9/y4.png" style="position: absolute;top:0;left:500px;">
+                        <img class="p10-si" src="./img/amd9/y5.png" style="position: absolute;top:0;left:500px;">
                     </div>
                     <div class="footer" style="min-height: 220px;">
-                        <img class=" ab-center" src="./img/amd9/ftxt1.png">
+                        <img class="p10-ftxt1 ab-center" src="./img/amd9/ftxt1.png">
                     </div>
                 </div>
             </div>
@@ -532,8 +532,8 @@
                         .fromTo(btxt1,2,{alpha:0,x:-100},{alpha:1,x:0,ease:Back.easeInOut})
                         .fromTo(_ftxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
                         .fromTo(_ftxt2,2,{alpha:0},{alpha:1,ease:Strong.easeInOut});
-                tl1.fromTo(_3d,6,{alpha:0,y:-1000,rotationX:720},{alpha:1,y:0,rotationX:0,ease:Back.easeInOut})
-                        .fromTo(_3d,15,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+                tl1.fromTo(_3d,6,{y:-1000,rotationX:720},{y:0,rotationX:0,ease:Back.easeInOut})
+                        .fromTo(_3d,20,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
                 tl.restart();
                 tl1.restart();
 
@@ -741,10 +741,57 @@
                 tl.restart();
             },
             page9:function(){
-
+                var page = '.page9';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var ttxt1 = $(page +' .ttxt1');
+                var ttxt2 = $(page +' .ttxt2');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var bgimg = $(page +' .bg_bimg');
+                var bgimg1 = $(".p9-bimg1");
+                var bgimg2 = $(".p9-bimg2");
+                tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,2,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,2,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,1,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo([ttxt1,ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
+                TweenMax.fromTo(bgimg1,5,{alpha:0},{alpha:1});
+                TweenMax.fromTo(bgimg2,1,{alpha:0,rotation:360},{alpha:1,rotation:0});
+                tl.restart();
             },
             page10:function(){
-
+                var page = '.page10';
+                tl.clear();
+                var amdlogo = $(page + ' .amdlogo');
+                var ld = $(page +' .ld');
+                var cjlogo = $(page +' .cjlogo');
+                var btxt1 = $(page +' .btxt1');
+                var btxt2 = $(page +' .btxt2');
+                var ttxt1 = $(page +' .ttxt1');
+                var qrcode = $(page +' .qrcode');
+                var ftxt = $(page +' .ftxt');
+                var card = $(page +' .card');
+                var bgimg = $(page +' .bg_bimg');
+                var p10_si = $(".p10-si");
+                var ftxt1 = $(".p10-ftxt1");
+                tl.fromTo(amdlogo,0.5,{y:-100},{y:0,ease:Back.easeInOut})
+                        .fromTo(ld,1,{alpha:0,rotation:0,scale:3},{alpha:1,rotation:720,scale:1,ease:Back.easeInOut},0)
+                        .fromTo(cjlogo,1,{y:-100,rotationY:0},{y:0,rotationY:720,ease:Back.easeInOut},"-=1")
+                        .fromTo(btxt1,0.5,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(btxt2,0.5,{alpha:0},{alpha:1,ease:Strong.easeInOut})
+                        .fromTo(ttxt1,1,{alpha:0},{alpha:1,ease:Back.easeInOut})
+                        .fromTo(ftxt1,1.5,{y:1000,alpha:0},{y:0,alpha:1})
+                        .fromTo(bgimg,3,{y:-1000,rotationY:980,alpha:0},{y:0,rotationY:0,alpha:1,ease:Back.easeInOut},0);
+//                TweenMax.fromTo(bgimg,3,{alpha:0},{alpha:1});
+                TweenMax.staggerFromTo(p10_si,0.2,{alpha:0},{alpha:1},0.1);
+                TweenMax.fromTo(p10_si,5,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
+                tl.restart();
             }
         };
         me.play = function(pageIndex){
@@ -796,7 +843,7 @@
 
     window.onload = function(){
         $(".wp-inner").fullpage({
-            start:0,
+            start:9,
             change:function(e){
                 amdAnimation.play((e.cur+1));
             }
