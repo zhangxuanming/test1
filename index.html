@@ -511,7 +511,6 @@
         var me = {};
         var tl = new TimelineMax({paused:true});
         var tl1 = new TimelineMax({paused:true});
-        var tl2 = new TimelineMax({paused:true});
         var pageAnimation = {
             page1:function(){
 //                起始页
@@ -752,7 +751,6 @@
                 var qrcode = $(page +' .qrcode');
                 var ftxt = $(page +' .ftxt');
                 var card = $(page +' .card');
-                var bgimg = $(page +' .bg_bimg');
                 var bgimg1 = $(".p9-bimg1");
                 var bgimg2 = $(".p9-bimg2");
                 tl.fromTo(amdlogo,1,{y:-100},{y:0,ease:Back.easeInOut})
@@ -762,7 +760,7 @@
                         .fromTo([ttxt1,ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo([qrcode,ftxt,card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 TweenMax.fromTo(bgimg1,5,{alpha:0},{alpha:1});
-                TweenMax.fromTo(bgimg2,1,{alpha:0,rotation:360},{alpha:1,rotation:0});
+                TweenMax.fromTo(bgimg2,1,{x:-500},{x:0,ease:Back.easeInOut});
                 tl.restart();
             },
             page10:function(){
@@ -788,7 +786,6 @@
                         .fromTo(ttxt1,1,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo(ftxt1,1.5,{y:1000,alpha:0},{y:0,alpha:1})
                         .fromTo(bgimg,3,{y:-1000,rotationY:980,alpha:0},{y:0,rotationY:0,alpha:1,ease:Back.easeInOut},0);
-//                TweenMax.fromTo(bgimg,3,{alpha:0},{alpha:1});
                 TweenMax.staggerFromTo(p10_si,0.2,{alpha:0},{alpha:1},0.1);
                 TweenMax.fromTo(p10_si,5,{rotationY:0},{rotationY:360,repeat:-1,ease:Power0.easeNone});
                 tl.restart();
@@ -843,7 +840,7 @@
 
     window.onload = function(){
         $(".wp-inner").fullpage({
-            start:0,
+            start:8,
             change:function(e){
                 amdAnimation.play((e.cur+1));
             }
