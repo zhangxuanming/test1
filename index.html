@@ -314,7 +314,7 @@
                         </div>
 
                         <div class="" style="height: 150px;">
-                            <div class="" style="height: 60px;">
+                            <div class="" style="height: 50px;">
                                 <img class="ttxt1 ab-center" src="./img/amd6/toptxt1.png">
                             </div>
                             <div class="" >
@@ -774,7 +774,7 @@
                         .fromTo([elc.p7.ttxt1,elc.p7.ttxt2],1,{alpha:0},{alpha:1,ease:Back.easeInOut})
                         .fromTo([elc.p7.qrcode,elc.p7.ftxt,elc.p7.card],1,{alpha:0},{alpha:1,ease:Back.easeInOut});
                 TweenMax.fromTo(elc.p7.bgimg,5,{alpha:0},{alpha:1});
-                TweenMax.to(elc.p7.bgimg,0.5,{ease:RoughEase.ease});
+                TweenMax.fromTo(elc.p7.bgimg,0.5,{x:20},{x:0,ease:RoughEase.ease});
 
                 tl.restart();
             },
