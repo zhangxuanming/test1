@@ -2,7 +2,7 @@
 <html>
 <head lang = "en">
     <meta charset = "UTF-8">
-    <meta name="viewport" content="target-densitydpi=device-dpi, width=640, user-scalable=no">
+    <meta name="viewport" content="target-densitydpi=device-dpi,width=640, user-scalable=no">
     <meta name="description" content="AMD 盛宴">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
@@ -24,6 +24,31 @@
     <div id='wx_pic' style='margin:0 auto;display:none;'>
         <img src='img/global/logo.jpg' />
     </div>
+    <script>
+
+        var mengvalue = -1;
+        //if(mengvalue<0){mengvalue=0;}
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth / 640;
+        var phoneHeight = parseInt(window.screen.height);
+        console.log(phoneHeight);
+
+        var ua = navigator.userAgent;
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            // andriod 2.3
+            if (version > 2.3) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                // andriod 2.3以上
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+            // 其他系统
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+
+    </script>
 </head>
 <body>
 
